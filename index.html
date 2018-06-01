@@ -1,0 +1,213 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Interactive Form</title>
+	<link rel="stylesheet" href="https://use.typekit.net/vog3uzk.css">
+	<link rel="stylesheet" href="https://revelsystems.com/wp-content/themes/reveldown/style.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="general-popup-form">
+		<form id="regForm" autocomplete="on" style="height: 700px;">
+			<div class="loadbar">
+				<div class="progressbar" ></div>
+				<div class="progress">1 / 6</div>
+			</div>
+			<fieldset>
+    			<legend>Step 1</legend>
+    			<h2 style="margin-bottom: 30px;text-align: center;">Which of the following best describes your business type?</h2>
+    			<!-- <p style="text-align: center;">Please Select One</p> -->
+   				<input id="QuickServiceBusiness" type="radio" name="businessType" value="Quick Service" class="radio-btn-images">
+    			<label for="QuickServiceBusiness" class="radio-images">
+					<img class="form-button-img" src="/img/food.svg">
+    				Quick Service
+    			</label>
+				<input id="TableServiceBusiness" type="radio" name="businessType" value="Table Service" class="radio-btn-images">
+				<label for="TableServiceBusiness" class="radio-images">
+					<img class="form-button-img" src="/img/dining-table.svg">
+					Table Service
+				</label>
+				<input id="PizzaBusiness" type="radio" name="businessType" value="Pizza" class="radio-btn-images">
+				<label for="PizzaBusiness" class="radio-images">
+					<img class="form-button-img" src="/img/pizza.svg">
+					Pizza
+				</label>
+				<input id="RetailBusiness" type="radio" name="businessType" value="Retail" class="radio-btn-images">
+				<label for="RetailBusiness" class="radio-images">
+					<img class="form-button-img" src="/img/shopping-cart.svg">
+					Retail
+				</label>
+				<input id="BarBusiness" type="radio" name="businessType" value="Bar" class="radio-btn-images">
+				<label for="BarBusiness" class="radio-images">
+					<img class="form-button-img" src="/img/whisky.svg">
+					Bar
+				</label>
+				<input id="OtherBusiness" type="radio" name="businessType" value="Other" class="radio-btn-images">
+				<label for="OtherBusiness" class="radio-images">
+					<img class="form-button-img" src="/img/options-more-options.svg">
+					Other
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Step 2</legend>
+				<h2>How many Locations do you currently operate in?</h2>
+    			<p>This would be a really compelling reason to continue on. We don't need to put this sentence in here but there is a design here just in case someone asks for it. We could use more text in this area because the radio buttons don't really take up any space.</p>
+				<input id="noOfLocations1" type="radio" name="noOfLocations" value="1" class="form-radios">
+				<label for="noOfLocations1"><i></i>One</label>
+				<input id="noOfLocations3" type="radio" name="noOfLocations" value="3" class="form-radios">
+				<label for="noOfLocations3"><i></i>2 - 3</label>
+				<input id="noOfLocations5" type="radio" name="noOfLocations" value="5" class="form-radios">
+				<label for="noOfLocations5"><i></i>4 - 5</label>
+				<input id="noOfLocations7" type="radio" name="noOfLocations" value="7" class="form-radios">
+				<label for="noOfLocations7"><i></i>6 - 7</label>
+				<input id="noOfLocations8" type="radio" name="noOfLocations" value="8" class="form-radios">
+				<label for="noOfLocations8"><i></i>7+</label>
+			</fieldset>
+			<fieldset>
+				<legend>Step 3</legend>
+				<h2>How many stations or iPads are you considering?</h2>
+    			<p>This would be a really compelling reason to continue on. We don't need to put this sentence in here but there is a design here just in case someone asks for it. We could use more text in this area because the radio buttons don't really take up any space.</p>
+				<input type="radio" id="noOfTerminals1" name="noOfTerminals" class="form-radios" value="1">
+				<label for="noOfTerminals1"><i></i>1</label>
+				<input type="radio" id="noOfTerminals2" name="noOfTerminals" class="form-radios" value="2">
+				<label for="noOfTerminals2"><i></i>2</label>
+				<input type="radio" id="noOfTerminals3" name="noOfTerminals" class="form-radios" value="4">
+				<label for="noOfTerminals3"><i></i>3 - 4</label>
+				<input type="radio" id="noOfTerminals5" name="noOfTerminals" class="form-radios" value="6">
+				<label for="noOfTerminals5"><i></i>5 - 6</label>
+				<input type="radio" id="noOfTerminals6" name="noOfTerminals" class="form-radios" value="7">
+				<label for="noOfTerminals6"><i></i>6+</label>
+			</fieldset>
+			<fieldset>
+				<legend>Step 4</legend>
+				<h2>Is your business new or existing?</h2>
+    			<p>This would be a really compelling reason to continue on. We don't need to put this sentence in here but there is a design here just in case someone asks for it. We could use more text in this area because these buttons don't really take up any space.</p>
+				<input type="radio" name="newOrExistingBus" value="New" class="radio-btn-images" id="newOrExistingBus1">
+				<label class="radio-images btn-box" for="newOrExistingBus1">
+					New
+				</label>
+				<input type="radio" name="newOrExistingBus" value="Existing" class="radio-btn-images" id="newOrExistingBus2">
+				<label class="radio-images btn-box" for="newOrExistingBus2">
+					Existing
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Step 5</legend>
+				<h2 style="margin-bottom: 30px;text-align: center;">Select the software features or function that you need.</h2>
+				<input id="featureInteredIn1" name="featureInteredIn" type="radio" class="radio-btn-images" value="Inventory Management">
+				<label for="featureInteredIn1" class="radio-images revel-icons">
+					<img class="form-button-img" src="https://revelsystems.com/wp-content/themes/reveldown/-/img/_icons/icon--inventory-management.svg">
+					Inventory Management
+				</label>
+				<input id="featureInteredIn2" name="featureInteredIn" type="radio" class="radio-btn-images" value="Customer Display System">
+				<label for="featureInteredIn2" class="radio-images revel-icons">
+					<img class="form-button-img" src="https://revelsystems.com/wp-content/themes/reveldown/-/img/_icons/icon--customer-display-system.svg">
+					Customer Display System
+				</label>
+				<input id="featureInteredIn3" name="featureInteredIn" type="radio" class="radio-btn-images" value="Online Ordering">				
+				<label for="featureInteredIn3" class="radio-images revel-icons">		
+					<img class="form-button-img" src="https://revelsystems.com/wp-content/themes/reveldown/-/img/_icons/icon--customer-relationship-management-crm.svg">
+					CRM
+				</label>
+				<input id="featureInteredIn4" name="featureInteredIn" type="radio" class="radio-btn-images" value="Employee Management">
+				<label for="featureInteredIn4" class="radio-images revel-icons">
+					<img class="form-button-img" src="https://revelsystems.com/wp-content/themes/reveldown/-/img/_icons/icon--employee-management.svg">
+					Employee Management
+				</label>
+				<input id="featureInteredIn5" name="featureInteredIn" type="radio" class="radio-btn-images" value="Reporting">
+				<label for="featureInteredIn5" class="radio-images revel-icons">
+					<img class="form-button-img" src="https://revelsystems.com/wp-content/themes/reveldown/-/img/_icons/icon--reporting.svg">
+					Reporting
+				</label>
+			</fieldset>
+    		<fieldset class="general-form">
+    			<legend>Last Step</legend>
+    			<h2 class="form-title">Schedule your free demo</h2>
+    			<label for="fullName">Full Name</label>
+    			<input type="text" name="fullName"placeholder="Full Name">
+    			<label for="businessName">Business Name</label>
+    			<input type="text" name="businessName"placeholder="Enter Your Business Name">
+    			<label for="email">Email</label>
+    			<input type="email" name="email"placeholder="Enter Your Email Address">
+    			<label for="phone">Phone</label>
+    			<input type="tel" name="phone"placeholder="Enter Your Telephone Number">
+    			<div class="last-call">
+    				<p>How do you prefer to be contacted? (optional) </p>
+    				<select name="" id="">
+    					<option value="default">Select One Please</option>
+    					<option value="Phone">Phone</option>
+    					<option value="Email">Email</option>
+    				</select>
+    			</div>
+    			<p>(Your information is safe with us. We simply need this information for one of our customer representatives to be able to get in touch with you and offer you the best deal and solution.)</p>
+    		</fieldset>
+			<div class="form-controls">
+				<button class="btn-form-control" type="button" id="prevBtn" onclick="nextPrev(-1);return false;">Previous</button>
+				<button class="btn-form-control" type="button" id="nextBtn" onclick="nextPrev(1);return false;">Next</button>
+			</div>
+		</form>
+		<div class="dark-transparency"></div>
+	</div>
+	<script type="text/javascript" src="https://revelsystems.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+	<script src="//app-sj14.marketo.com/js/forms2/js/forms2.min.js"></script>
+	<script>MktoForms2.loadForm("//app-sj14.marketo.com", "804-YHP-876", 2550);</script>
+	<script>
+	var currentTab = 0; // Current tab is set to be the first tab (0)
+	showTab(currentTab); // Display the current tab
+	function showTab(n) {
+	  // This function will display the specified tab of the form ...
+	  var x = document.getElementsByTagName('fieldset');
+
+	  x[n].style.display = "block";
+	  // ... and fix the Previous/Next buttons:
+	  if (n == 0) {
+	    document.getElementById("prevBtn").style.display = "none";
+	  } else {
+	    document.getElementById("prevBtn").style.display = "inline-block";
+	  }
+	  if (n == (x.length - 1)) {
+	  	var nextBtnEl = document.getElementById('nextBtn');
+	    nextBtnEl.innerHTML = "Submit";
+	    nextBtnEl.className = 'btn-submit';
+		document.getElementById("prevBtn").className = 'btn-form-control';
+	  } else {
+	    document.getElementById("nextBtn").innerHTML = "Next";
+	    if ( document.getElementById("nextBtn").innerHTML === "Next") {
+	    	document.getElementById("nextBtn").className = 'btn-form-control';
+	    	document.getElementById("prevBtn").className = 'btn-form-control';
+	    }
+	  }
+	  
+	}
+
+	function nextPrev(n) {
+	  // This function will figure out which tab to display
+	  var x = document.getElementsByTagName('fieldset');
+	  	  // Hide the current tab:
+	  x[currentTab].style.display = "none";
+	  // Increase or decrease the current tab by 1:
+	  currentTab = currentTab + n;
+	  var w = (currentTab * 17 + 18) + "%";
+	  jQuery('.progressbar').css('width', w);
+	  jQuery('.progress').text(currentTab + 1 + " / 6");
+
+	  // if you have reached the end of the form... :
+	  if (currentTab >= x.length) {
+	    //...the form gets submitted:
+	    document.getElementById("regForm").submit();
+	    return false;
+	  }
+	  console.log(x[currentTab]);
+	  // Otherwise, display the correct tab:
+	  showTab(currentTab);
+	}
+	jQuery(':radio').change(function(event) {
+		nextPrev(1);
+	});
+
+
+
+	</script>
+</body>
+</html>

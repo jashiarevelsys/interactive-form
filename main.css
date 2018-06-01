@@ -1,0 +1,208 @@
+.general-popup-form {
+  color: #373B40;
+  font-size: 16px;
+  position: relative;
+  margin: 20px auto;
+  max-width: 750px;
+  background-color: white; }
+  .general-popup-form label, .general-popup-form input {
+    display: block;
+    width: 100%;
+    background: none; }
+  .general-popup-form input {
+    padding: 20px 21px 12px;
+    border: none;
+    border: solid thin #373B40;
+    border-radius: 2px;
+    margin-bottom: 13px;
+    margin-left: 10px; }
+  .general-popup-form label {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    margin-left: 20px;
+    border-radius: 6px;
+    text-align: left;
+    margin-bottom: 20px; }
+    .general-popup-form label .form-button-img {
+      border-radius: 6px;
+      margin-bottom: 10px;
+      border: thin solid white;
+      padding: 10%; }
+      .general-popup-form label .form-button-img:hover {
+        border: thin solid #00A3E0; }
+      .general-popup-form label .form-button-img svg {
+        fill: blue;
+        width: 100%;
+        height: 70px; }
+    .general-popup-form label.radio-images {
+      display: inline-block;
+      width: 28%;
+      max-width: 250px;
+      vertical-align: top;
+      text-align: center; }
+      .general-popup-form label.radio-images:hover {
+        color: #00A3E0; }
+      .general-popup-form label.radio-images .radio-btn-images {
+        visibility: hidden; }
+    .general-popup-form label.revel-icons {
+      vertical-align: top; }
+      .general-popup-form label.revel-icons img {
+        max-height: 140px; }
+  .general-popup-form .form-radios {
+    display: inline-block;
+    width: inherit;
+    visibility: hidden;
+    position: absolute; }
+    .general-popup-form .form-radios:checked + label > i {
+      box-shadow: inset 0 0 0 3px #fff;
+      background: #00A3E0 !important;
+      border: 1px solid #00A3E0; }
+    .general-popup-form .form-radios + label {
+      display: inline-block;
+      width: inherit;
+      vertical-align: top;
+      margin: 20px 10px;
+      min-width: 82px; }
+      .general-popup-form .form-radios + label:hover i {
+        box-shadow: inset 0 0 0 3px #fff;
+        background: gray; }
+      .general-popup-form .form-radios + label i {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: 0.2s;
+        box-shadow: inset 0 0 0 14px #fff;
+        border: 1px solid gray;
+        background: gray; }
+  .general-popup-form .radio-btn-images {
+    display: block;
+    position: absolute;
+    width: 28%;
+    visibility: hidden; }
+  .general-popup-form p {
+    margin: 0px;
+    margin-bottom: 20px;
+    letter-spacing: 1.4;
+    text-align: left; }
+  .general-popup-form h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 600; }
+    .general-popup-form h2.form-title {
+      font-size: 32px;
+      color: #00A3E0;
+      text-align: center;
+      font-weight: 100;
+      text-transform: uppercase;
+      letter-spacing: 2.76;
+      text-align: center;
+      margin-bottom: 30px; }
+      .general-popup-form h2.form-title + p {
+        font-size: 1em; }
+  .general-popup-form fieldset {
+    padding: 90px 60px 30px;
+    text-align: center;
+    display: none;
+    border: none;
+    height: 100%; }
+    .general-popup-form fieldset input[type=radio]:checked + label {
+      color: #00A3E0;
+      font-weight: 700; }
+      .general-popup-form fieldset input[type=radio]:checked + label .form-button-img {
+        border: thick solid #00A3E0; }
+      .general-popup-form fieldset input[type=radio]:checked + label.btn-box {
+        background-color: #00A3E0;
+        color: white; }
+    .general-popup-form fieldset input[type=radio] + .btn-box {
+      padding: 20px;
+      border: thin solid #373B40; }
+      .general-popup-form fieldset input[type=radio] + .btn-box:hover {
+        border: thin solid #00A3E0; }
+    .general-popup-form fieldset input[type=radio]:checked + .btn-box {
+      border: thin solid #00A3E0; }
+    .general-popup-form fieldset h2 {
+      text-align: left; }
+    .general-popup-form fieldset .last-call {
+      text-align: left;
+      margin-bottom: 10px; }
+      .general-popup-form fieldset .last-call p, .general-popup-form fieldset .last-call select {
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-top: 20px; }
+      .general-popup-form fieldset .last-call select {
+        float: right;
+        background: lightgrey;
+        color: #373B40;
+        padding: 5px 10px;
+        font-size: 16px;
+        line-height: 1;
+        border: thin solid #373B40;
+        border-radius: 6px;
+        height: 34px;
+        margin-top: 13px;
+        /*-webkit-appearance: none;*/
+        /*margin-left: 10px;*/ }
+    .general-popup-form fieldset.general-form p {
+      font-size: 1em;
+      margin-left: 10px; }
+    .general-popup-form fieldset.general-form label {
+      cursor: default;
+      margin-bottom: 4px; }
+    .general-popup-form fieldset legend {
+      text-align: left;
+      position: absolute;
+      top: 0;
+      margin-top: 6px;
+      color: white; }
+  .general-popup-form form {
+    height: 700px; }
+  .general-popup-form .loadbar {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 5%;
+    width: 100%;
+    background-color: #f5f5f5; }
+    .general-popup-form .loadbar .progressbar {
+      background-color: #00A3E0;
+      width: 18%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .general-popup-form .loadbar .progress {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 7px 17px; }
+  .general-popup-form .form-controls {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    /*padding: 10px 60px;*/ }
+    .general-popup-form .form-controls .btn-form-control {
+      width: 110px;
+      padding: 12px 20px; }
+      .general-popup-form .form-controls .btn-form-control#nextBtn {
+        position: absolute;
+        right: 0;
+        margin-right: 50px; }
+      .general-popup-form .form-controls .btn-form-control#prevBtn {
+        position: absolute;
+        left: 0;
+        margin-left: 70px; }
+    .general-popup-form .form-controls .btn-submit {
+      width: 200px;
+      padding: 12px 20px;
+      position: absolute;
+      right: 0;
+      margin-right: 50px; }
+
+/*# sourceMappingURL=main.css.map */

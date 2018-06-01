@@ -1,0 +1,334 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript" src="https://static.revelsystems.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+	var _failed = false ;
+	jQuery(document).ready(function($){
+		$('body').on( 'submit' , '.reseller-form' , function() {
+			_failed = false ;
+			$('.revelValMsg').remove() ;
+			
+			//Loop through each field to be validated - Specific to this form
+			$('.reseller-form .validationField.required').each(function(i,e){
+				_val  =  $(this).find('input,textarea,select').val();
+				//Empty String validation
+				if ( String(_val) == '' ) {
+					$(this).append('<div style="color:#e04;" class="revelValMsg">*Field Required</div>');
+					_failed = true ;
+				}
+				//Email Validation
+				if ( $(this).hasClass( 'email' ) ) {
+					
+					_email_re  =  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,63}$/i;
+					if( _val != '' && !_email_re.test(_val) ) {
+						$(this).find('.revelValMsg').remove() ;
+						$(this).append('<div style="color:#f00;" class="revelValMsg">*Email Address Required</div>');
+						_failed = true ;
+					}
+				}
+				//Numeric Validation
+				if ( $(this).hasClass( 'numeric' ) ) {
+					_numeric  =  /^[0-9\-\.\,\s]*$/i;
+					if( _val != '' && !_numeric.test(_val) ) {
+						$(this).find('.revelValMsg').remove() ;
+						$(this).append('<div style="color:#f00;" class="revelValMsg">*Numeric Value Expected</div>');
+						_failed = true ;
+					}
+				}
+				if ( $(this).hasClass( 'integer' ) ) {
+					_integer  =  /^[0-9]*$/i;
+					if( _val != '' && !_integer.test(_val) ) {
+						$(this).find('.revelValMsg').remove() ;
+						$(this).append('<div style="color:#f00;" class="revelValMsg">*Integer (Whole Number) Value Expected</div>');
+						_failed = true ;
+					}
+				}
+			});
+			if ( _failed ) {  //prevent form submission if validation fails, and scroll user up to top of form
+				$(document).scrollTop($('.reseller-form .revelValMsg').first().parents('.validationField').offset().top - (($('#header').css('position') == 'fixed' ) ? $('#header').innerHeight() + 15 : 0 ) );
+				return false;
+			} ;
+		});
+		
+		function syncBundleQuan(){
+			_bndlQ = $('.bundleInput input').val();
+			_playerLyncQ = $('.playerLyncInput input:checked').length > 0 ? $('.playerLyncInput input:checked').val() : 0;
+			_addTillQ = $('.addTillInput input:checked').length > 0 ? $('.addTillInput input:checked').val() : 0;
+			if ($('.bundleGrid li').length > 0 ) {
+				$('.bundleGrid li.terminal').each(function(i,e) {
+					var _newQ = parseInt($(e).find('span').attr('data-multiplier')) * parseInt( _bndlQ );
+					$(e).find('span').html(_newQ);
+				});
+				$('.bundleGrid li.playerLync').each(function(i,e) {
+					var _newQ = parseInt($(e).find('span').attr('data-multiplier')) * parseInt( _playerLyncQ );
+					$(e).find('span').html(_newQ);
+				});
+				$('.bundleGrid li.addTill').each(function(i,e) {
+					var _newQ = parseInt($(e).find('span').attr('data-multiplier')) * parseInt( _addTillQ );
+					$(e).find('span').html(_newQ);
+				});
+			}
+		}
+		
+		syncBundleQuan();	
+		
+		$('.bundleInput input,.playerLyncInput input,.addTillInput input').on( 'keyup change' , function() {
+			syncBundleQuan();
+		});
+		
+		$( ".datepicker" ).datepicker({ defaultDate: 35 });
+	
+	});
+</script>
+
+<form class="reseller-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+	<input type=hidden name="oid" value="00D50000000JLAm">
+	<input type=hidden name="retURL" value="http://revelsystems.com">
+	<input type=hidden name="recordType" id="recordType" value="01250000000Ht2q">
+	<input type=hidden name="lead_source" ID="lead_source" value="Focus Brands W2L">
+	<input type=hidden name="Payment_Processor__c" ID="Payment_Processor__c" value="Verifone">
+	<input type=hidden name="00N50000003GwXj" ID="00N50000003GwXj" value="Cinnabon">
+	
+	<div class="form-section section1">	
+		
+		<h3 class="form-title">Bakery Information:</h3>
+	
+		<div class="validationField required">
+			<label for="00N500000032HI0">Bakery Number:</label>
+			<input id="00N500000032HI0" maxlength=“10” name="00N500000032HI0" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="phone">Bakery Phone</label>
+			<input id="phone" maxlength="40" name="phone" size="20" type="text" />
+		</div>
+		<div class="validationField">
+			<label for="fax">Bakery Fax</label>
+			<input id="fax" maxlength="40" name="fax" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="street">Bakery Physical Street Address</label>
+			<textarea name="street"></textarea>
+		</div>
+		<div class="validationField required">
+			<label for="city">Bakery City</label>
+			<input id="city" maxlength="40" name="city" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="state">Bakery State/Province</label>
+			<input id="state" maxlength="20" name="state" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="country">Bakery Country</label>
+			<input id="country" maxlength="40" name="country" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="zip">Bakery Zip</label>
+			<input id="zip" maxlength="20" name="zip" size="20" type="text" />
+		</div>
+		
+	</div>
+	<div class="form-section section2">	
+
+		<h3 class="form-title">Contact Information:</h3>
+		
+		<div class="validationField required">
+			<label for="company">Company</label>
+			<input id="company" maxlength="40" name="company" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="first_name">Your First Name</label>
+			<input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="last_name">Your Last Name</label>
+			<input id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="title">Your Title</label>
+			<input id="title" maxlength="40" name="title" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="mobile">Your Mobile Phone</label>
+			<input id="mobile" maxlength="40" name="mobile" size="20" type="text" />
+		</div>
+		<div class="validationField required email">
+			<label for="email">Your Email</label>
+			<input id="email" maxlength="80" name="email" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="00N50000003WwtJ">Desired Go Live Date</label>
+			<input  id="00N50000003WwtJ" name="00N50000003WwtJ" size="12" type="text" class="datepicker" />
+			<small> must be minimum of 4 to 5 weeks out</small>
+		</div>		
+		<div class="validationField required">
+			<label for="00N500000032HIA">Gateway Processor:</label>
+			<select id="00N500000032HIA" name="00N500000032HIA" title="Gateway Processor">
+				<option value="">--None--</option>
+				<option value="Vantiv - St Pete Host Processor">Vantiv - St Pete Host Processor</option>
+				<option value="TSYS Processor">TSYS Processor</option>
+				<option value="RBS World Pay Processor">RBS World Pay Processor</option>
+				<option value="Chase Paymentech Tampa Host Processor">Chase Paymentech Tampa Host Processor</option>
+				<option value="Heartland Processor">Heartland Processor</option>
+				<option value="Global East - Host Processor">Global East - Host Processor</option>
+				<option value="First Data Nashville ISO Processor">First Data Nashville ISO Processor</option>
+				<option value="First Data North Processor">First Data North Processor</option>
+				<option value="First Data Omaha">First Data Omaha Processor</option>
+				<option value="Elavon Processor">Elavon Processor</option>					
+			</select>
+		</div>
+	
+		<div class="validationField required integer bundleInput">
+			<label for="00N50000002lIFm">No. of Terminals:</label>
+			<input id="00N50000002lIFm" name="00N50000002lIFm" size="20" type="number" value="1"/>
+		</div>
+		<div class="bundleGrid">
+			<h5>Focus Brands Exclusive Discounted Bundle</h5>
+			<ul>
+				<li class="terminal"><span data-multiplier="2"></span> Apple iPad Air 2018 <small>White</small></li>
+				<li class="terminal"><span data-multiplier="2"></span> Power Adapter Lightning Pin 10'</li>
+				<li class="terminal"><span data-multiplier="1"></span> L stand + CDS attachment</li>
+				<li class="terminal"><span data-multiplier="1"></span> Vasario Cash Drawer <small>(VS320 BL1616)</small></li>
+				<li class="terminal"><span data-multiplier="1"></span> Cash Drawer APG Mount Bracket</li>
+				<li class="terminal"><span data-multiplier="1"></span> Cash Drawer Insert</li>
+				<li class="terminal"><span data-multiplier="1"></span> Honeywell Voyager 1400 Scanner</li>
+				<li class="terminal"><span data-multiplier="1"></span> Epson m30 Printer</li>
+				<li class="terminal"><span data-multiplier="1"></span> Enterprise Quick Service Software License</li>
+				<li class="terminal"><span data-multiplier="1"></span> Enterprise Customer Display Software License</li>
+				<li class="terminal"><span data-multiplier="1"></span> Hardware Configuration Services</li>
+			</ul>
+		</div>
+		<input type="submit" name="submit">
+
+	</div>
+</form>
+
+<form class="reseller-form" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+	<input type=hidden name="oid" value="00D50000000JLAm">
+	<input type=hidden name="retURL" value="http://revelsystems.com">
+	<input type=hidden name="recordType" id="recordType" value="01250000000Ht2q">
+	<input type=hidden name="lead_source" ID="lead_source" value="Focus Brands W2L">
+	<input type=hidden name="Payment_Processor__c" ID="Payment_Processor__c" value="Verifone">
+	<input type=hidden name="00N50000003GwXj" ID="00N50000003GwXj" value="Auntie Anne’s">
+	
+	<div class="form-section section1">	
+		
+		<h3 class="form-title">Store Information:</h3>
+	
+		<div class="validationField required">
+			<label for="00N500000032HI0">Store Number:</label>
+			<input id="00N500000032HI0" maxlength=“10” name="00N500000032HI0" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="phone">Store Phone</label>
+			<input id="phone" maxlength="40" name="phone" size="20" type="text" />
+		</div>
+		<div class="validationField">
+			<label for="fax">Store Fax</label>
+			<input id="fax" maxlength="40" name="fax" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="street">Store Physical Street Address</label>
+			<textarea name="street"></textarea>
+		</div>
+		<div class="validationField required">
+			<label for="city">Store City</label>
+			<input id="city" maxlength="40" name="city" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="state">Store State/Province</label>
+			<input id="state" maxlength="20" name="state" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="country">Store Country</label>
+			<input id="country" maxlength="40" name="country" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="zip">Store Zip</label>
+			<input id="zip" maxlength="20" name="zip" size="20" type="text" />
+		</div>
+		
+	</div>
+	<div class="form-section section2">	
+
+		<h3 class="form-title">Contact Information:</h3>
+		
+		<div class="validationField required">
+			<label for="company">Company</label>
+			<input id="company" maxlength="40" name="company" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="first_name">Your First Name</label>
+			<input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="last_name">Your Last Name</label>
+			<input id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="title">Your Title</label>
+			<input id="title" maxlength="40" name="title" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="mobile">Your Mobile Phone</label>
+			<input id="mobile" maxlength="40" name="mobile" size="20" type="text" />
+		</div>
+		<div class="validationField required email">
+			<label for="email">Your Email</label>
+			<input id="email" maxlength="80" name="email" size="20" type="text" />
+		</div>
+		<div class="validationField required">
+			<label for="00N50000003WwtJ">Desired Go Live Date</label>
+			<input  id="00N50000003WwtJ" name="00N50000003WwtJ" size="12" type="text" class="datepicker" />
+			<small> must be minimum of 4 to 5 weeks out</small>
+		</div>		
+		<div class="validationField required">
+			<label for="00N500000032HIA">Gateway Processor:</label>
+			<select id="00N500000032HIA" name="00N500000032HIA" title="Gateway Processor">
+				<option value="">--None--</option>
+				<option value="Vantiv - St Pete Host Processor">Vantiv - St Pete Host Processor</option>
+				<option value="TSYS Processor">TSYS Processor</option>
+				<option value="RBS World Pay Processor">RBS World Pay Processor</option>
+				<option value="Chase Paymentech Tampa Host Processor">Chase Paymentech Tampa Host Processor</option>
+				<option value="Heartland Processor">Heartland Processor</option>
+				<option value="Global East - Host Processor">Global East - Host Processor</option>
+				<option value="First Data Nashville ISO Processor">First Data Nashville ISO Processor</option>
+				<option value="First Data North Processor">First Data North Processor</option>
+				<option value="First Data Omaha">First Data Omaha Processor</option>
+				<option value="Elavon Processor">Elavon Processor</option>
+			</select>
+		</div>
+	
+		<div class="validationField required integer bundleInput">
+			<label for="00N50000002lIFm">No. of Terminals:</label>
+			<input id="00N50000002lIFm" name="00N50000002lIFm" size="20" type="number" value="1"/>
+		</div>
+		<div class="bundleGrid">
+			<h5>Focus Brands Exclusive Discounted Bundle</h5>
+			<ul>
+				<li class="terminal"><span data-multiplier="2"></span> Apple iPad Air 2018 <small>White</small></li>
+				<li class="terminal"><span data-multiplier="2"></span> Power Adapter Lightning Pin 10'</li>
+				<li class="terminal"><span data-multiplier="1"></span> L stand + CDS attachment</li>
+				<li class="terminal"><span data-multiplier="1"></span> Vasario Cash Drawer <small>(VS320 BL1616)</small></li>
+				<li class="terminal"><span data-multiplier="1"></span> Cash Drawer APG Mount Bracket</li>
+				<li class="terminal"><span data-multiplier="1"></span> Cash Drawer Insert</li>
+				<li class="terminal"><span data-multiplier="1"></span> Honeywell Voyager 1400 Scanner</li>
+				<li class="terminal"><span data-multiplier="1"></span> Epson m30 Printer</li>
+				<li class="terminal"><span data-multiplier="1"></span> Enterprise Quick Service Software License</li>
+				<li class="terminal"><span data-multiplier="1"></span> Enterprise Customer Display Software License</li>
+				<li class="terminal"><span data-multiplier="1"></span> Hardware Configuration Services</li>
+			</ul>
+		</div>
+	
+		<input type="submit" name="submit">
+
+	</div>
+</form>
+</body>
+</html>
