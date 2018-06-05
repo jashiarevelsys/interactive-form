@@ -40,7 +40,7 @@
       display: inline-block;
       width: 28%;
       max-width: 250px;
-      vertical-align: top;
+      vertical-align: middle;
       text-align: center; }
       .general-popup-form label.radio-images:hover {
         color: #00A3E0; }
@@ -126,7 +126,8 @@
     .general-popup-form fieldset input[type=radio]:checked + .btn-box {
       border: thin solid #00A3E0; }
     .general-popup-form fieldset h2 {
-      text-align: left; }
+      margin-bottom: 30px;
+      text-align: center; }
     .general-popup-form fieldset .last-call {
       text-align: left;
       margin-bottom: 10px; }

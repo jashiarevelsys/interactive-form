@@ -49,7 +49,7 @@ $revel-blue: #00A3E0;
 			display: inline-block;
 			width: 28%;
 			max-width: 250px;
-			vertical-align: top;
+			vertical-align: middle;
 			text-align: center;
 			&:hover{
 				color: $revel-blue;
@@ -178,7 +178,7 @@ $revel-blue: #00A3E0;
 
 		
 		h2 {
-			text-align: left;
+			margin-bottom: 30px;text-align: center;
 		}
 		.last-call {
 			text-align: left;
