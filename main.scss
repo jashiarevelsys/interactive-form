@@ -136,7 +136,7 @@ $revel-blue: #00A3E0;
 		}
 
 	}
-	fieldset {
+	fieldset, #Step2PathB, #hold-for-redirect {
 		padding: 90px 60px 30px;
 		text-align: center;
 		display: none;
@@ -224,6 +224,19 @@ $revel-blue: #00A3E0;
 
 		 }
 	}
+	#Step2PathB {
+		display: none;
+	}
+	#hold-for-redirect {
+		display: none;
+		p {
+			text-align: center;
+		}
+		img {
+			max-width: 300px;
+		}
+	}
+
 	.dark-transparency {
 
 	}

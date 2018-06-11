@@ -104,38 +104,38 @@
       margin-bottom: 30px; }
       .general-popup-form h2.form-title + p {
         font-size: 1em; }
-  .general-popup-form fieldset {
+  .general-popup-form fieldset, .general-popup-form #Step2PathB, .general-popup-form #hold-for-redirect {
     padding: 90px 60px 30px;
     text-align: center;
     display: none;
     border: none;
     height: 100%; }
-    .general-popup-form fieldset input[type=radio]:checked + label {
+    .general-popup-form fieldset input[type=radio]:checked + label, .general-popup-form #Step2PathB input[type=radio]:checked + label, .general-popup-form #hold-for-redirect input[type=radio]:checked + label {
       color: #00A3E0;
       font-weight: 700; }
-      .general-popup-form fieldset input[type=radio]:checked + label .form-button-img {
+      .general-popup-form fieldset input[type=radio]:checked + label .form-button-img, .general-popup-form #Step2PathB input[type=radio]:checked + label .form-button-img, .general-popup-form #hold-for-redirect input[type=radio]:checked + label .form-button-img {
         border: thick solid #00A3E0; }
-      .general-popup-form fieldset input[type=radio]:checked + label.btn-box {
+      .general-popup-form fieldset input[type=radio]:checked + label.btn-box, .general-popup-form #Step2PathB input[type=radio]:checked + label.btn-box, .general-popup-form #hold-for-redirect input[type=radio]:checked + label.btn-box {
         background-color: #00A3E0;
         color: white; }
-    .general-popup-form fieldset input[type=radio] + .btn-box {
+    .general-popup-form fieldset input[type=radio] + .btn-box, .general-popup-form #Step2PathB input[type=radio] + .btn-box, .general-popup-form #hold-for-redirect input[type=radio] + .btn-box {
       padding: 20px;
       border: thin solid #373B40; }
-      .general-popup-form fieldset input[type=radio] + .btn-box:hover {
+      .general-popup-form fieldset input[type=radio] + .btn-box:hover, .general-popup-form #Step2PathB input[type=radio] + .btn-box:hover, .general-popup-form #hold-for-redirect input[type=radio] + .btn-box:hover {
         border: thin solid #00A3E0; }
-    .general-popup-form fieldset input[type=radio]:checked + .btn-box {
+    .general-popup-form fieldset input[type=radio]:checked + .btn-box, .general-popup-form #Step2PathB input[type=radio]:checked + .btn-box, .general-popup-form #hold-for-redirect input[type=radio]:checked + .btn-box {
       border: thin solid #00A3E0; }
-    .general-popup-form fieldset h2 {
+    .general-popup-form fieldset h2, .general-popup-form #Step2PathB h2, .general-popup-form #hold-for-redirect h2 {
       margin-bottom: 30px;
       text-align: center; }
-    .general-popup-form fieldset .last-call {
+    .general-popup-form fieldset .last-call, .general-popup-form #Step2PathB .last-call, .general-popup-form #hold-for-redirect .last-call {
       text-align: left;
       margin-bottom: 10px; }
-      .general-popup-form fieldset .last-call p, .general-popup-form fieldset .last-call select {
+      .general-popup-form fieldset .last-call p, .general-popup-form fieldset .last-call select, .general-popup-form #Step2PathB .last-call p, .general-popup-form #Step2PathB .last-call select, .general-popup-form #hold-for-redirect .last-call p, .general-popup-form #hold-for-redirect .last-call select {
         display: inline-block;
         margin-bottom: 20px;
         margin-top: 20px; }
-      .general-popup-form fieldset .last-call select {
+      .general-popup-form fieldset .last-call select, .general-popup-form #Step2PathB .last-call select, .general-popup-form #hold-for-redirect .last-call select {
         float: right;
         background: lightgrey;
         color: #373B40;
@@ -148,18 +148,26 @@
         margin-top: 13px;
         /*-webkit-appearance: none;*/
         /*margin-left: 10px;*/ }
-    .general-popup-form fieldset.general-form p {
+    .general-popup-form fieldset.general-form p, .general-popup-form #Step2PathB.general-form p, .general-popup-form #hold-for-redirect.general-form p {
       font-size: 1em;
       margin-left: 10px; }
-    .general-popup-form fieldset.general-form label {
+    .general-popup-form fieldset.general-form label, .general-popup-form #Step2PathB.general-form label, .general-popup-form #hold-for-redirect.general-form label {
       cursor: default;
       margin-bottom: 4px; }
-    .general-popup-form fieldset legend {
+    .general-popup-form fieldset legend, .general-popup-form #Step2PathB legend, .general-popup-form #hold-for-redirect legend {
       text-align: left;
       position: absolute;
       top: 0;
       margin-top: 6px;
       color: white; }
+  .general-popup-form #Step2PathB {
+    display: none; }
+  .general-popup-form #hold-for-redirect {
+    display: none; }
+    .general-popup-form #hold-for-redirect p {
+      text-align: center; }
+    .general-popup-form #hold-for-redirect img {
+      max-width: 300px; }
   .general-popup-form form {
     height: 700px; }
   .general-popup-form .loadbar {

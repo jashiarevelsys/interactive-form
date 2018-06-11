@@ -17,17 +17,17 @@
 			<fieldset>
     			<legend>Step 1</legend>
     			<h2>Tell us about your customers!</h2>
-   				<input id="QuickServiceBusiness" type="radio" name="businessType" value="Quick Service" class="radio-btn-images">
+   				<input id="QuickServiceBusiness" type="radio" name="businessType" value="QSR" class="radio-btn-images">
     			<label for="QuickServiceBusiness" class="radio-images">
 					<img class="form-button-img" src="https://static.revelsystems.com/wp-content/uploads/2018/01/L-Stand_Black_DSC04530-150x150.jpg">
     				They order and pay at the counter. 
     			</label>
-				<input id="TableServiceBusiness" type="radio" name="businessType" value="Table Service" class="radio-btn-images">
+				<input id="TableServiceBusiness" type="radio" name="businessType" value="TSR" class="radio-btn-images">
 				<label for="TableServiceBusiness" class="radio-images">
 					<img class="form-button-img" src="https://static.revelsystems.com/wp-content/uploads/2018/03/Revel-3-150x150.jpg">
 					They order and pay at the table.
 				</label>
-				<input id="QuickTableBusiness" type="radio" name="businessType" value="Quick Table" class="radio-btn-images">
+				<input id="QuickTableBusiness" type="radio" name="businessType" value="QuickTable" class="radio-btn-images">
 				<label for="QuickTableBusiness" class="radio-images">
 					<img class="form-button-img" src="https://static.revelsystems.com/wp-content/uploads/2018/03/MobileOrderTaker-150x150.jpg">
 					They can order and pay at a counter or table. 
@@ -102,7 +102,7 @@
 					Other 
 				</label>
 			</fieldset>
-			<fieldset id="Step2PathB">
+			<div id="Step2PathB">
 				<legend>Step 2</legend>
 				<h2>How many stations or iPads are you considering?</h2>
 				<input type="radio" id="noOfTerminals1" name="noOfTerminals" class="form-radios" value="1">
@@ -115,7 +115,7 @@
 				<label for="noOfTerminals5"><i></i>5 - 6</label>
 				<input type="radio" id="noOfTerminals6" name="noOfTerminals" class="form-radios" value="7">
 				<label for="noOfTerminals6"><i></i>6+</label>
-			</fieldset>
+			</div>
 			<fieldset>
 				<legend>Step 3</legend>
 				<h2>How many locations do you currently operate?</h2>
@@ -123,7 +123,7 @@
 				<label for="noOfLocations1"><i></i>1-2</label>
 				<input id="noOfLocations3" type="radio" name="noOfLocations" value="3" class="form-radios">
 				<label for="noOfLocations3"><i></i>3-19</label>
-				<input id="noOfLocations5" type="radio" name="noOfLocations" value="5" class="form-radios">
+				<input id="noOfLocations5" type="radio" name="noOfLocations" value="20" class="form-radios">
 				<label for="noOfLocations5"><i></i>20+</label>
 			</fieldset>
 			<fieldset>
@@ -133,12 +133,12 @@
 				<label class="radio-images btn-box" for="newOrExistingBus1">
 					We haven’t opened yet
 				</label>
-				<input type="radio" name="newOrExistingBus" value="Existing" class="radio-btn-images" id="newOrExistingBus1">
-				<label class="radio-images btn-box" for="newOrExistingBus1">
+				<input type="radio" name="newOrExistingBus" value="Existing" class="radio-btn-images" id="newOrExistingBus2">
+				<label class="radio-images btn-box" for="newOrExistingBus2">
 					Less than a year
 				</label>
-				<input type="radio" name="newOrExistingBus" value="LongLasting" class="radio-btn-images" id="newOrExistingBus2">
-				<label class="radio-images btn-box" for="newOrExistingBus2">	 
+				<input type="radio" name="newOrExistingBus" value="LongLasting" class="radio-btn-images" id="newOrExistingBus3">
+				<label class="radio-images btn-box" for="newOrExistingBus3">	 
 					More than a year 
 				</label>
 			</fieldset>
@@ -190,97 +190,28 @@
     			<legend>Last Step</legend>
     			<h2 class="form-title">Schedule your free demo!</h2>
     			<label for="fullName">Full Name</label>
-    			<input type="text" name="fullName"placeholder="Full Name">
+    			<input id="fullName" type="text" name="fullName"placeholder="Full Name">
     			<label for="businessName">Business Name</label>
-    			<input type="text" name="businessName"placeholder="Enter Your Business Name">
+    			<input id="businessName" 	type="text" name="businessName"placeholder="Enter Your Business Name">
     			<label for="email">Email</label>
-    			<input type="email" name="email"placeholder="Enter Your Email Address">
+    			<input id="email" type="email" name="email"placeholder="Enter Your Email Address">
     			<label for="phone">Phone</label>
-    			<input type="tel" name="phone"placeholder="Enter Your Telephone Number">
+    			<input id="phone"	type="tel" name="phone"placeholder="Enter Your Telephone Number">
     		</fieldset>
-			<div class="form-controls">
-				<button class="btn-form-control" type="button" id="prevBtn" onclick="nextPrev(-1);return false;">Previous</button>
+    		<div id="hold-for-redirect">
+    			<p>Hold on. We're putting top people on this.</p>
+    			<img src="/img/waiting.gif" alt="waiting">
+    		</div>
+			<div class="form-controls" style="position: relative;">
+				<button style="display: none;" class="btn-form-control" type="button" id="prevBtn" onclick="nextPrev(-1);return false;">Previous</button>
 				<button style="display: none;" class="btn-form-control" type="button" id="nextBtn" onclick="nextPrev(1);return false;">Next</button>
 			</div>
 		</form>
 		<div class="dark-transparency"></div>
 	</div>
+	<script src="//app-sj14.marketo.com/js/forms2/js/forms2.min.js"></script>
 	<!-- <script type="text/javascript" src="https://revelsystems.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script> -->
 	<script src="/js/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-	<script src="//app-sj14.marketo.com/js/forms2/js/forms2.min.js"></script>
-	<script>MktoForms2.loadForm("//app-sj14.marketo.com", "804-YHP-876", 2550);</script>
-	<script>
-
-	var currentTab = 0; // Current tab is set to be the first tab (0)
-	showTab(currentTab); // Display the current tab
-	function showTab(n) {
-	  // This function will display the specified tab of the form ...
-	  var x = document.getElementsByTagName('fieldset');
-
-	  x[n].style.display = "block";
-	  // ... and fix the Previous/Next buttons:
-	  if (n == 0) {
-	    document.getElementById("prevBtn").style.display = "none";
-	  } else {
-	    document.getElementById("prevBtn").style.display = "inline-block";
-	  }
-	  if (n == (x.length - 1)) {
-	  	var nextBtnEl = document.getElementById('nextBtn');
-	    nextBtnEl.innerHTML = "Submit";
-	    nextBtnEl.className = 'btn-submit';
-		document.getElementById("prevBtn").className = 'btn-form-control';
-	  } else {
-	    document.getElementById("nextBtn").innerHTML = "Next";
-	    if ( document.getElementById("nextBtn").innerHTML === "Next") {
-	    	document.getElementById("nextBtn").className = 'btn-form-control';
-	    	document.getElementById("prevBtn").className = 'btn-form-control';
-	    }
-	  }
-	  
-	}
-
-	function nextPrev(n) {
-	  // This function will figure out which tab to display
-	  var x = document.getElementsByTagName('fieldset');
-	  	  // Hide the current tab:
-	  x[currentTab].style.display = "none";
-	  // Increase or decrease the current tab by 1:
-	  currentTab = currentTab + n;
-	  var w = (currentTab * 17 + 18) + "%";
-	  jQuery('.progressbar').css('width', w);
-	  jQuery('.progress').text(currentTab + 1 + " / 6");
-
-	  // if you have reached the end of the form... :
-	  if (currentTab >= x.length) {
-	    //...the form gets submitted:
-	    document.getElementById("regForm").submit();
-	    return false;
-	  }
-	  console.log(x[currentTab]);
-	  // Otherwise, display the correct tab:
-	  showTab(currentTab);
-	showNextButton(currentTab);
-	}
-
-	jQuery(':radio').change(function(event) {
-		nextPrev(1);
-	});
-
-	function showNextButton(currentTab){
-		var w = document.getElementsByTagName('fieldset');
-		y = w[currentTab];
-		if ( currentTab == w.length - 1 ) { 
-			$('#nextBtn').show();
-		} else if ( $(y).find(':radio:checked').length === 0 ) {
-			$('#nextBtn').hide();
-		} else {
-		    $('#nextBtn').show();
-		}
-
-	}
-
-
-
-	</script>
+	<script src="/js/main-min.js" ></script>
 </body>
 </html>
