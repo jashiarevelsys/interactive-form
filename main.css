@@ -213,5 +213,8 @@
       position: absolute;
       right: 0;
       margin-right: 50px; }
+  .general-popup-form p.indicator {
+    font-size: .7em;
+    text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
