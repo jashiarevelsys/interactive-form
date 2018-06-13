@@ -1,3 +1,7 @@
+@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+  body {
+    padding-top: 0px; } }
+
 .general-popup-form {
   color: #373B40;
   font-size: 16px;
@@ -16,20 +20,32 @@
     border-radius: 2px;
     margin-bottom: 13px;
     margin-left: 10px; }
+    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+      .general-popup-form input {
+        margin-left: 0; } }
   .general-popup-form label {
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     margin-left: 20px;
-    border-radius: 6px;
+    border-radius: 2px;
     text-align: left;
     margin-bottom: 20px; }
+    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+      .general-popup-form label {
+        margin-left: 0;
+        margin-bottom: 0; } }
     .general-popup-form label .form-button-img {
-      border-radius: 6px;
+      border-radius: 2px;
       margin-bottom: 10px;
       border: thin solid white;
       padding: 10%; }
+      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+        .general-popup-form label .form-button-img {
+          padding: .25em;
+          max-width: 120px;
+          margin-bottom: 0; } }
       .general-popup-form label .form-button-img:hover {
         border: thin solid #00A3E0; }
       .general-popup-form label .form-button-img svg {
@@ -42,6 +58,15 @@
       max-width: 250px;
       vertical-align: middle;
       text-align: center; }
+      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+        .general-popup-form label.radio-images {
+          display: flex;
+          flex-flow: row;
+          width: 100%;
+          max-width: 480px;
+          text-align: left;
+          align-items: center;
+          margin-bottom: .5em; } }
       .general-popup-form label.radio-images:hover {
         color: #00A3E0; }
       .general-popup-form label.radio-images .radio-btn-images {
@@ -80,10 +105,12 @@
         border: 1px solid gray;
         background: gray; }
   .general-popup-form .radio-btn-images {
-    display: block;
     position: absolute;
     width: 28%;
     visibility: hidden; }
+    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+      .general-popup-form .radio-btn-images {
+        width: 2px; } }
   .general-popup-form p {
     margin: 0px;
     margin-bottom: 20px;
@@ -110,6 +137,10 @@
     display: none;
     border: none;
     height: 100%; }
+    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+      .general-popup-form fieldset, .general-popup-form #Step2PathB, .general-popup-form #hold-for-redirect {
+        padding: 90px 10px 30px;
+        height: auto; } }
     .general-popup-form fieldset input[type=radio]:checked + label, .general-popup-form #Step2PathB input[type=radio]:checked + label, .general-popup-form #hold-for-redirect input[type=radio]:checked + label {
       color: #00A3E0;
       font-weight: 700; }
@@ -143,7 +174,7 @@
         font-size: 16px;
         line-height: 1;
         border: thin solid #373B40;
-        border-radius: 6px;
+        border-radius: 2px;
         height: 34px;
         margin-top: 13px;
         /*-webkit-appearance: none;*/
@@ -196,23 +227,56 @@
     height: 50px;
     text-align: center;
     /*padding: 10px 60px;*/ }
+    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+      .general-popup-form .form-controls {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        margin: 10px; } }
     .general-popup-form .form-controls .btn-form-control {
       width: 110px;
-      padding: 12px 20px; }
+      padding: 12px 20px;
+      border-radius: 2px;
+      border: solid 1px #00A3E0;
+      margin-bottom: 10px; }
+      .general-popup-form .form-controls .btn-form-control:hover {
+        background-color: #00A3E0;
+        color: white;
+        border: solid 1px #373B40; }
       .general-popup-form .form-controls .btn-form-control#nextBtn {
         position: absolute;
         right: 0;
         margin-right: 50px; }
+        @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+          .general-popup-form .form-controls .btn-form-control#nextBtn {
+            position: relative;
+            margin: 1em auto; } }
       .general-popup-form .form-controls .btn-form-control#prevBtn {
         position: absolute;
         left: 0;
         margin-left: 70px; }
+        @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+          .general-popup-form .form-controls .btn-form-control#prevBtn {
+            position: relative;
+            margin: 1em auto; } }
     .general-popup-form .form-controls .btn-submit {
       width: 200px;
       padding: 12px 20px;
       position: absolute;
       right: 0;
-      margin-right: 50px; }
+      margin-right: 50px;
+      border-radius: 2px;
+      border: solid 1px #00A3E0;
+      margin-bottom: 10px; }
+      .general-popup-form .form-controls .btn-submit:hover {
+        background-color: #00A3E0;
+        color: white;
+        border: solid 1px #373B40; }
+      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+        .general-popup-form .form-controls .btn-submit {
+          position: relative;
+          margin: auto; } }
   .general-popup-form p.indicator {
     font-size: .7em;
     text-align: center; }

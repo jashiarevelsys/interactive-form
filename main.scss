@@ -1,6 +1,11 @@
 $revel-night: #373B40;
 $revel-blue: #00A3E0;
 
+body{
+	@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+		padding-top: 0px;
+	}
+}
 .general-popup-form {
 	color: $revel-night;
 	font-size: 16px;
@@ -13,13 +18,16 @@ $revel-blue: #00A3E0;
 		width: 100%;
 		background: none;
 	}
-	input {		
+	input {
 		padding: 20px 21px 12px;
 		border: none;
 		border: solid thin $revel-night;
 		border-radius: 2px;
 		margin-bottom: 13px;
 		margin-left: 10px;
+		@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+			margin-left: 0;
+		}
 	}
 	label {
 		cursor: pointer;
@@ -27,14 +35,23 @@ $revel-blue: #00A3E0;
 		-webkit-user-select: none;
 		-webkit-touch-callout: none;
 		margin-left: 20px;
-		border-radius: 6px;
+		border-radius: 2px;
 		text-align: left;
 		margin-bottom: 20px;
+		@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+			margin-left: 0;
+			margin-bottom: 0;
+		}
 		.form-button-img {
-			border-radius: 6px;
+			border-radius: 2px;
 			margin-bottom: 10px;
 			border: thin solid white;
 			padding: 10%;
+			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+				padding: .25em;
+				max-width: 120px;
+				margin-bottom: 0;
+			}
 			&:hover {
 				border: thin solid $revel-blue;
 			}
@@ -42,7 +59,7 @@ $revel-blue: #00A3E0;
 				fill: blue;
 				width: 100%;
 				height: 70px;
-			} 
+			}
 		}
 
 		&.radio-images {
@@ -51,6 +68,15 @@ $revel-blue: #00A3E0;
 			max-width: 250px;
 			vertical-align: middle;
 			text-align: center;
+			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+				display: flex;
+				flex-flow: row;
+				width: 100%;
+				max-width: 480px;
+				text-align: left;
+				align-items: center;
+				margin-bottom: .5em;
+			}
 			&:hover{
 				color: $revel-blue;
 			}
@@ -82,7 +108,7 @@ $revel-blue: #00A3E0;
 			vertical-align: top;
 			margin: 20px 10px;
 			min-width: 82px;
-			
+
 			&:hover {
 				i {
 					box-shadow: inset 0 0 0 3px #fff;
@@ -105,10 +131,12 @@ $revel-blue: #00A3E0;
 		}
 	}
 	.radio-btn-images {
-		display: block;
 		position: absolute;
 		width: 28%;
 		visibility: hidden;
+		@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+			width: 2px;
+		}
 
 	}
 	p {
@@ -142,7 +170,10 @@ $revel-blue: #00A3E0;
 		display: none;
 		border: none;
 		height: 100%;
-
+		@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+			padding: 90px 10px 30px;
+			height: auto;
+		}
 		input[type=radio]:checked + label {
 			color: $revel-blue;
 			font-weight: 700;
@@ -162,7 +193,7 @@ $revel-blue: #00A3E0;
 		}
 
 		input[type=radio] {
-			
+
 			& + .btn-box {
 				padding: 20px;
 				border: thin solid $revel-night;
@@ -174,9 +205,9 @@ $revel-blue: #00A3E0;
 				border: thin solid $revel-blue;
 			}
 		}
-		
 
-		
+
+
 		h2 {
 			margin-bottom: 30px;text-align: center;
 		}
@@ -197,7 +228,7 @@ $revel-blue: #00A3E0;
 				font-size: 16px;
 				line-height: 1;
 				border: thin solid $revel-night;
-				border-radius: 6px;
+				border-radius: 2px;
 				height: 34px;
 				margin-top: 13px;
 				/*-webkit-appearance: none;*/
@@ -219,8 +250,8 @@ $revel-blue: #00A3E0;
 		 	position: absolute;top: 0;
 		 	margin-top: 6px;
 		 	color: white;
-		 	
-		 	
+
+
 
 		 }
 	}
@@ -273,18 +304,41 @@ $revel-blue: #00A3E0;
 		height: 50px;
 		text-align: center;
 		/*padding: 10px 60px;*/
+		@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			align-content: space-around;
+			margin: 10px;
+		}
 		.btn-form-control {
 			width: 110px;
 			padding: 12px 20px;
+			border-radius: 2px;
+			border: solid 1px $revel-blue;
+			margin-bottom: 10px;
+			&:hover{
+				background-color: $revel-blue;
+				color: white;
+				border: solid 1px $revel-night;
+			}
 			&#nextBtn {
 				position: absolute;
 				right: 0;
 				margin-right: 50px;
+				@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+					position: relative;
+					margin: 1em auto;
+				}
 			}
 			&#prevBtn {
 				position: absolute;
 				left: 0;
 				margin-left: 70px;
+				@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+					position: relative;
+					margin: 1em auto;
+				}
 			}
 		}
 		.btn-submit {
@@ -293,6 +347,18 @@ $revel-blue: #00A3E0;
 			position: absolute;
 			right: 0;
 			margin-right: 50px;
+			border-radius: 2px;
+			border: solid 1px $revel-blue;
+			margin-bottom: 10px;
+			&:hover{
+				background-color: $revel-blue;
+				color: white;
+				border: solid 1px $revel-night;
+			}
+			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
+				position: relative;
+				margin: auto;
+			}
 		}
 	}
 	p.indicator {
