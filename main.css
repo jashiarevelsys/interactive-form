@@ -9,6 +9,11 @@
   margin: 20px auto;
   max-width: 750px;
   background-color: white; }
+  @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+    .general-popup-form {
+      padding: 0px 10px;
+      margin: 0px;
+      font-size: 14px; } }
   .general-popup-form label, .general-popup-form input {
     display: block;
     width: 100%;
@@ -36,16 +41,26 @@
       .general-popup-form label {
         margin-left: 0;
         margin-bottom: 0; } }
+    @media only-screen and (max-height: 550px), only screen and (max-device-height: 550px), only screen and (max-device-height: 550px) {
+      .general-popup-form label {
+        padding: 10px;
+        width: 100%;
+        border: thin solid #373B40;
+        vertical-align: top; } }
     .general-popup-form label .form-button-img {
       border-radius: 2px;
       margin-bottom: 10px;
       border: thin solid white;
-      padding: 10%; }
+      margin-right: 10px;
+      padding: 4%; }
       @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
         .general-popup-form label .form-button-img {
           padding: .25em;
-          max-width: 120px;
+          max-width: 110px;
           margin-bottom: 0; } }
+      @media only-screen and (max-height: 550px), only screen and (max-device-height: 550px), only screen and (max-device-height: 550px) {
+        .general-popup-form label .form-button-img {
+          display: none; } }
       .general-popup-form label .form-button-img:hover {
         border: thin solid #00A3E0; }
       .general-popup-form label .form-button-img svg {
@@ -56,7 +71,7 @@
       display: inline-block;
       width: 28%;
       max-width: 250px;
-      vertical-align: middle;
+      vertical-align: top;
       text-align: center; }
       @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
         .general-popup-form label.radio-images {
@@ -90,6 +105,9 @@
       vertical-align: top;
       margin: 20px 10px;
       min-width: 82px; }
+      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+        .general-popup-form .form-radios + label {
+          display: flex; } }
       .general-popup-form .form-radios + label:hover i {
         box-shadow: inset 0 0 0 3px #fff;
         background: gray; }
@@ -120,15 +138,23 @@
     font-size: 22px;
     margin-bottom: 5px;
     font-weight: 600; }
+    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+      .general-popup-form h2 {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.2em; } }
     .general-popup-form h2.form-title {
-      font-size: 32px;
+      font-size: 28px;
       color: #00A3E0;
       text-align: center;
-      font-weight: 100;
+      font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 2.76;
       text-align: center;
       margin-bottom: 30px; }
+      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+        .general-popup-form h2.form-title {
+          font-size: 26px; } }
       .general-popup-form h2.form-title + p {
         font-size: 1em; }
   .general-popup-form fieldset, .general-popup-form #Step2PathB, .general-popup-form #hold-for-redirect {
@@ -139,26 +165,34 @@
     height: 100%; }
     @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
       .general-popup-form fieldset, .general-popup-form #Step2PathB, .general-popup-form #hold-for-redirect {
-        padding: 90px 10px 30px;
+        padding: 60px 10px 10px;
         height: auto; } }
     .general-popup-form fieldset input[type=radio]:checked + label, .general-popup-form #Step2PathB input[type=radio]:checked + label, .general-popup-form #hold-for-redirect input[type=radio]:checked + label {
       color: #00A3E0;
-      font-weight: 700; }
+      font-weight: 500;
+      line-height: 1.2em; }
       .general-popup-form fieldset input[type=radio]:checked + label .form-button-img, .general-popup-form #Step2PathB input[type=radio]:checked + label .form-button-img, .general-popup-form #hold-for-redirect input[type=radio]:checked + label .form-button-img {
         border: thick solid #00A3E0; }
       .general-popup-form fieldset input[type=radio]:checked + label.btn-box, .general-popup-form #Step2PathB input[type=radio]:checked + label.btn-box, .general-popup-form #hold-for-redirect input[type=radio]:checked + label.btn-box {
         background-color: #00A3E0;
         color: white; }
+        @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+          .general-popup-form fieldset input[type=radio]:checked + label.btn-box, .general-popup-form #Step2PathB input[type=radio]:checked + label.btn-box, .general-popup-form #hold-for-redirect input[type=radio]:checked + label.btn-box {
+            padding: 8px; } }
     .general-popup-form fieldset input[type=radio] + .btn-box, .general-popup-form #Step2PathB input[type=radio] + .btn-box, .general-popup-form #hold-for-redirect input[type=radio] + .btn-box {
-      padding: 20px;
-      border: thin solid #373B40; }
+      padding: 10px;
+      width: 100%;
+      border: thin solid #373B40;
+      vertical-align: top; }
       .general-popup-form fieldset input[type=radio] + .btn-box:hover, .general-popup-form #Step2PathB input[type=radio] + .btn-box:hover, .general-popup-form #hold-for-redirect input[type=radio] + .btn-box:hover {
         border: thin solid #00A3E0; }
     .general-popup-form fieldset input[type=radio]:checked + .btn-box, .general-popup-form #Step2PathB input[type=radio]:checked + .btn-box, .general-popup-form #hold-for-redirect input[type=radio]:checked + .btn-box {
       border: thin solid #00A3E0; }
     .general-popup-form fieldset h2, .general-popup-form #Step2PathB h2, .general-popup-form #hold-for-redirect h2 {
-      margin-bottom: 30px;
-      text-align: center; }
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 300;
+      line-height: 1.25em; }
     .general-popup-form fieldset .last-call, .general-popup-form #Step2PathB .last-call, .general-popup-form #hold-for-redirect .last-call {
       text-align: left;
       margin-bottom: 10px; }
@@ -200,18 +234,18 @@
     .general-popup-form #hold-for-redirect img {
       max-width: 300px; }
   .general-popup-form form {
-    height: 700px; }
+    height: 100%; }
   .general-popup-form .loadbar {
     position: absolute;
     overflow: hidden;
     top: 0;
     left: 0;
-    height: 5%;
+    height: 34px;
     width: 100%;
     background-color: #f5f5f5; }
     .general-popup-form .loadbar .progressbar {
       background-color: #00A3E0;
-      width: 18%;
+      width: 20%;
       height: 100%;
       position: absolute;
       top: 0;
@@ -233,7 +267,9 @@
         flex-flow: row wrap;
         justify-content: space-around;
         align-content: space-around;
-        margin: 10px; } }
+        margin: 0px auto 10px;
+        width: auto;
+        max-width: 100%; } }
     .general-popup-form .form-controls .btn-form-control {
       width: 110px;
       padding: 12px 20px;
@@ -250,7 +286,6 @@
         margin-right: 50px; }
         @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
           .general-popup-form .form-controls .btn-form-control#nextBtn {
-            position: relative;
             margin: 1em auto; } }
       .general-popup-form .form-controls .btn-form-control#prevBtn {
         position: absolute;
@@ -258,10 +293,9 @@
         margin-left: 70px; }
         @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
           .general-popup-form .form-controls .btn-form-control#prevBtn {
-            position: relative;
             margin: 1em auto; } }
     .general-popup-form .form-controls .btn-submit {
-      width: 200px;
+      width: 180px;
       padding: 12px 20px;
       position: absolute;
       right: 0;
@@ -270,13 +304,10 @@
       border: solid 1px #00A3E0;
       margin-bottom: 10px; }
       .general-popup-form .form-controls .btn-submit:hover {
-        background-color: #00A3E0;
-        color: white;
         border: solid 1px #373B40; }
       @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
         .general-popup-form .form-controls .btn-submit {
-          position: relative;
-          margin: auto; } }
+          margin: 1em auto; } }
   .general-popup-form p.indicator {
     font-size: .7em;
     text-align: center; }

@@ -4,7 +4,7 @@ var fullName, firstName, lastName, email, companyName, vertical, subVertical,noO
 function getFullName() {
 	fullName = document.getElementById('fullName').value;
 	firstName = fullName.split(' ').slice(0, -1).join(' ');
-	lastName = fullName.split(' ').slice(-1).join(' ');	
+	lastName = fullName.split(' ').slice(-1).join(' ');
 }
 
 showTab(currentTab); // Display the current tab
@@ -17,11 +17,11 @@ function showTab(n) {
   	document.getElementById('Step2PathA').style.display = "none";
   	document.getElementById('Step2PathB').style.display = "block";
   } else {
-  	x[n].style.display = "block";	
+  	x[n].style.display = "block";
 	document.getElementById('Step2PathB').style.display = "none";
   }
 
-  
+
   // ... and fix the Previous/Next buttons:
   if (n === 0) {
     document.getElementById("prevBtn").style.display = "none";
@@ -40,7 +40,7 @@ function showTab(n) {
     	document.getElementById("prevBtn").className = 'btn-form-control';
     }
   }
-  
+
 }
 
 function nextPrev(n) {
@@ -76,7 +76,7 @@ jQuery(':radio').change(function(event) {
 function showNextButton(currentTab){
 	var w = document.getElementsByTagName('fieldset');
 	y = w[currentTab];
-	if ( currentTab == w.length - 1 ) { 
+	if ( currentTab == w.length - 1 ) {
 		$('#nextBtn').show();
 	} else if ( $(y).find(':radio:checked').length === 0 ) {
 		$('#nextBtn').hide();
@@ -88,7 +88,7 @@ function showNextButton(currentTab){
 function submitMarketoForm(){
 	fullName = document.getElementById('fullName').value;
 	firstName = fullName.split(' ').slice(0, -1).join(' ');
-	lastName = fullName.split(' ').slice(-1).join(' ');	
+	lastName = fullName.split(' ').slice(-1).join(' ');
 	email = document.getElementById('email').value;
 	companyName = document.getElementById("businessName").value;
 	vertical = document.querySelector( 'input[name="businessType"]:checked' ).value;
@@ -121,7 +121,7 @@ function submitMarketoForm(){
 				return false;
 			});
 		}
-		
+
 
 	});
 
