@@ -1,11 +1,6 @@
 $revel-night: #373B40;
 $revel-blue: #00A3E0;
 
-body{
-	@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
-		padding-top: 0px;
-	}
-}
 .general-popup-form {
 	color: $revel-night;
 	font-size: 16px;
@@ -13,6 +8,7 @@ body{
 	margin: 20px auto;
 	max-width: 750px;
 	background-color: white;
+
 	@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 		padding: 0px 10px;
 		margin: 0px;
@@ -388,14 +384,50 @@ body{
 				border: solid 1px $revel-night;
 			}
 			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
-				// position: relative;
+				
 				margin: 1em auto;
-
+				width: initial;
+			}
+			@media (max-width: 480px) {
+				width: initial;	
 			}
 		}
 	}
 	p.indicator {
 		font-size: .7em;
 		text-align: center;
+	}
+	#regForm {
+		position: relative;
+		overflow: hidden;
+		fieldset {
+			position: absolute;
+			max-width: 750px;
+			min-height: 400px;
+			transform: translateX(760px);
+			transition: all 1s;
+			display: block;
+			top:0px;
+			opacity: 0;
+			&.active {
+				position: relative;
+				transform: translateX(0px);
+				opacity: 1;
+				
+			}
+			&.passed {
+				opacity: 0;
+				transform: translateX(-760px);
+			}
+			@media (max-width: 480px) {
+				padding: 50px 0px;
+				.radio-images {
+					/*width: 40%;*/
+				}
+				input {
+					margin-left: 0px;
+				}
+			}
+		}
 	}
 }

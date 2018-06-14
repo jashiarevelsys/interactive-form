@@ -1,7 +1,3 @@
-@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-  body {
-    padding-top: 0px; } }
-
 .general-popup-form {
   color: #373B40;
   font-size: 16px;
@@ -307,9 +303,39 @@
         border: solid 1px #373B40; }
       @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
         .general-popup-form .form-controls .btn-submit {
-          margin: 1em auto; } }
+          margin: 1em auto;
+          width: initial; } }
+      @media (max-width: 480px) {
+        .general-popup-form .form-controls .btn-submit {
+          width: initial; } }
   .general-popup-form p.indicator {
     font-size: .7em;
     text-align: center; }
+  .general-popup-form #regForm {
+    position: relative;
+    overflow: hidden; }
+    .general-popup-form #regForm fieldset {
+      position: absolute;
+      max-width: 750px;
+      min-height: 400px;
+      transform: translateX(760px);
+      transition: all 1s;
+      display: block;
+      top: 0px;
+      opacity: 0; }
+      .general-popup-form #regForm fieldset.active {
+        position: relative;
+        transform: translateX(0px);
+        opacity: 1; }
+      .general-popup-form #regForm fieldset.passed {
+        opacity: 0;
+        transform: translateX(-760px); }
+      @media (max-width: 480px) {
+        .general-popup-form #regForm fieldset {
+          padding: 50px 0px; }
+          .general-popup-form #regForm fieldset .radio-images {
+            /*width: 40%;*/ }
+          .general-popup-form #regForm fieldset input {
+            margin-left: 0px; } }
 
 /*# sourceMappingURL=main.css.map */

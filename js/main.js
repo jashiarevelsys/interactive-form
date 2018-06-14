@@ -16,8 +16,12 @@ function showTab(n) {
   if ( document.getElementById('RetailBusiness').checked && n == 1 ) {
   	document.getElementById('Step2PathA').style.display = "none";
   	document.getElementById('Step2PathB').style.display = "block";
+  //} else if (){
   } else {
-  	x[n].style.display = "block";
+  	var element = x[n];
+  	element.classList.add('active');
+  	element.classList.remove('passed');
+  	// element.style.right = "0px";
 	document.getElementById('Step2PathB').style.display = "none";
   }
 
@@ -47,7 +51,18 @@ function nextPrev(n) {
 	// This function will figure out which tab to display
 	var x = document.getElementsByTagName('fieldset');
 	// Hide the current tab:
-	x[currentTab].style.display = "none";
+	// x[currentTab].style.display = "none";
+	if(n === -1){
+		x[currentTab].classList.remove('active');
+		x[currentTab].style = "";
+
+	} else {
+		x[currentTab].classList.remove('active');
+		x[currentTab].classList.add('passed');
+
+		
+
+	}
 	// Increase or decrease the current tab by 1:
 	currentTab = currentTab + n;
 	var w = (currentTab * 17 + 18) + "%";
@@ -124,6 +139,4 @@ function submitMarketoForm(){
 
 
 	});
-
-
 }
