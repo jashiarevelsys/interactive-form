@@ -1,6 +1,42 @@
 $revel-night: #373B40;
 $revel-blue: #00A3E0;
 
+$breakpoints: (
+  xxxl: (min-width: 2000px),
+  mxxxl: (min-width: 1600px),
+  xxl: (max-width: 1300px),
+  xl: (min-width: 1100px),
+  l: (max-width: 1099px),
+  m: (max-width: 880px),
+  s: (max-width: 700px),
+  xs: (max-width: 420px),
+  xxs: (min-width: 320px),
+);
+@mixin bp($name) {
+  $value: map-get($breakpoints, $name);
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "The '#{$name}' breakpoint is not defined. "
+        + "Please make sure it is defined in the global.scss '$breakpoint' map.";
+  }
+}
+
+@mixin device(){
+	@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+		@content;
+	}
+}
+
+@include bp(m) {
+	body {
+	    padding-top: 0px;
+	}
+}
+
 .general-popup-form {
 	color: $revel-night;
 	font-size: 16px;
@@ -10,9 +46,12 @@ $revel-blue: #00A3E0;
 	background-color: white;
 
 	@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
-		padding: 0px 10px;
+		padding: 0px;
 		margin: 0px;
 		font-size: 14px;
+		legend {
+			margin-left: 10px;
+		}
 	}
 	label, input {
 		display: block;
@@ -46,7 +85,12 @@ $revel-blue: #00A3E0;
 		@media only-screen and (max-height: 550px), only screen and (max-device-height: 550px), only screen and (max-device-height: 550px){
 			padding: 10px;
 			width: 100%;
-			border: thin solid #373B40;
+			&.radio-images {
+				border: thin solid $revel-night;
+			}
+			&.main-form-label {
+				padding-bottom: 0px;
+			}
 			vertical-align: top;
 		}
 		.form-button-img {
@@ -265,6 +309,7 @@ $revel-blue: #00A3E0;
 			}
 		}
 		&.general-form {
+
 			p {
 				font-size: 1em;
 				margin-left: 10px;
@@ -272,6 +317,19 @@ $revel-blue: #00A3E0;
 			label {
 				cursor: default;
 				margin-bottom: 4px;
+			}
+			@include device(){
+				input {
+					margin-bottom: 0px;
+				}
+				.form-title {
+					margin-bottom: 5px;
+					font-size: 20px;
+				}
+				&.active {
+					padding-left: 10px !important;
+					padding-right: 10px !important;
+				}
 			}
 		 }
 		 legend {
@@ -419,8 +477,8 @@ $revel-blue: #00A3E0;
 				opacity: 0;
 				transform: translateX(-760px);
 			}
-			@media (max-width: 480px) {
-				padding: 50px 0px;
+			@include device() {
+				padding: 50px 10px 10px;
 				.radio-images {
 					/*width: 40%;*/
 				}
@@ -428,6 +486,9 @@ $revel-blue: #00A3E0;
 					margin-left: 0px;
 				}
 			}
+		}
+		@include bp(xs) {
+			padding-bottom: 10px;
 		}
 	}
 }

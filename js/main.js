@@ -107,9 +107,9 @@ function submitMarketoForm(){
 	email = document.getElementById('email').value;
 	companyName = document.getElementById("businessName").value;
 	vertical = document.querySelector( 'input[name="businessType"]:checked' ).value;
-	subVertical = document.querySelector( 'input[name="subBusinessType"]:checked').value;
-	noOfTerminals = (document.querySelector( 'input[name="noOfTerminals"]:checked' )) ? document.querySelector( 'input[name="noOfTerminals"]:checked' ).value : "No Selection";
-	noOfLocations = (document.querySelector( 'input[name="noOfLocations"]:checked' )) ? document.querySelector( 'input[name="noOfLocations"]:checked' ).value : "No Selection";
+	subVertical = ( document.querySelector( 'input[name="subBusinessType"]:checked') ) ? document.querySelector( 'input[name="subBusinessType"]:checked').value : "No Selection";
+	noOfTerminals = (document.querySelector( 'input[name="noOfTerminals"]:checked' ) ) ? document.querySelector( 'input[name="noOfTerminals"]:checked' ).value : "No Selection";
+	noOfLocations = (document.querySelector( 'input[name="noOfLocations"]:checked' ) ) ? document.querySelector( 'input[name="noOfLocations"]:checked' ).value : "No Selection";
 	timeInBusiness = document.querySelector( 'input[name="newOrExistingBus"]:checked' ).value;
 	favoriteFeature = document.querySelector( 'input[name="featureEnteredIn"]:checked' ).value;
 	phone = document.getElementById("phone").value;
@@ -131,8 +131,8 @@ function submitMarketoForm(){
 			});
 			form.submit();
 			form.onSuccess(function(values, followUpUrl) {
-				finalDest = (vertical == "Other") ? "" : "-" + vertical;
-				location.href = "https://revelsystems.com/thank-you" + finalDest;
+				finalDest = ( vertical == "QuickTable" ) ? "Other" : vertical;
+				location.href = "https://revelsystems.dev/thank-you/?vertical=" + finalDest + "&fn=" + encodeURI(firstName);
 				return false;
 			});
 		}
