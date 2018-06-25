@@ -1,362 +1,392 @@
-@media (max-width: 880px) {
-  body {
-    padding-top: 0px; } }
-
-.general-popup-form {
-  color: #373B40;
-  font-size: 16px;
-  position: relative;
-  margin: 20px auto;
-  max-width: 750px;
-  background-color: white; }
+#general-popup-form {
+  font-family: 'proxima-nova';
+  /*display: none;*/
+  /*	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 16000004;*/ }
   @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-    .general-popup-form {
-      padding: 0px;
-      margin: 0px;
-      font-size: 14px; }
-      .general-popup-form legend {
-        margin-left: 10px; } }
-  .general-popup-form label, .general-popup-form input {
-    display: block;
-    width: 100%;
-    background: none; }
-  .general-popup-form input {
-    padding: 20px 21px 12px;
-    border: none;
-    border: solid thin #373B40;
-    border-radius: 2px;
-    margin-bottom: 13px;
-    margin-left: 10px; }
-    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-      .general-popup-form input {
-        margin-left: 0; } }
-  .general-popup-form label {
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    margin-left: 20px;
-    border-radius: 2px;
-    text-align: left;
-    margin-bottom: 20px; }
-    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-      .general-popup-form label {
-        margin-left: 0;
-        margin-bottom: 0; } }
-    @media only-screen and (max-height: 550px), only screen and (max-device-height: 550px), only screen and (max-device-height: 550px) {
-      .general-popup-form label {
-        padding: 10px;
+    #general-popup-form {
+      height: 100%;
+      /*	    left: 0;
+	    position: fixed;
+	    top: 0;
+*/
+      width: 100%;
+      /*	    right: initial;
+	    bottom: initial;
+*/ }
+      #general-popup-form .general-popup-form {
+        /*top: 50%;*/
+        /*-ms-transform: translate(0,-50%);
+	   		transform: translate(0,-50%);*/
+        color: #373B40;
+        /*font-size: 16px;
+		    position: relative;
+		    margin: 20px auto;*/
+        /* max-width: 750px; */
+        max-height: 100%;
+        background-color: #fff;
+        position: absolute;
         width: 100%;
-        vertical-align: top; }
-        .general-popup-form label.radio-images {
-          border: thin solid #373B40; }
-        .general-popup-form label.main-form-label {
-          padding-bottom: 0px; } }
-    .general-popup-form label .form-button-img {
-      border-radius: 2px;
-      margin-bottom: 10px;
-      border: thin solid white;
-      margin-right: 10px;
-      padding: 4%; }
-      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-        .general-popup-form label .form-button-img {
-          padding: .25em;
-          max-width: 110px;
-          margin-bottom: 0; } }
-      @media only-screen and (max-height: 550px), only screen and (max-device-height: 550px), only screen and (max-device-height: 550px) {
-        .general-popup-form label .form-button-img {
-          display: none; } }
-      .general-popup-form label .form-button-img:hover {
-        border: thin solid #00A3E0; }
-      .general-popup-form label .form-button-img svg {
-        fill: blue;
-        width: 100%;
-        height: 70px; }
-    .general-popup-form label.radio-images {
-      display: inline-block;
-      width: 28%;
-      max-width: 250px;
-      vertical-align: top;
-      text-align: center; }
-      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-        .general-popup-form label.radio-images {
-          display: flex;
-          flex-flow: row;
-          width: 100%;
-          max-width: 480px;
-          text-align: left;
-          align-items: center;
-          margin-bottom: .5em; } }
-      .general-popup-form label.radio-images:hover {
-        color: #00A3E0; }
-      .general-popup-form label.radio-images .radio-btn-images {
-        visibility: hidden; }
-    .general-popup-form label.revel-icons {
-      vertical-align: top; }
-      .general-popup-form label.revel-icons img {
-        max-height: 140px; }
-  .general-popup-form .form-radios {
-    display: inline-block;
-    width: inherit;
-    visibility: hidden;
-    position: absolute; }
-    .general-popup-form .form-radios:checked + label > i {
-      box-shadow: inset 0 0 0 3px #fff;
-      background: #00A3E0 !important;
-      border: 1px solid #00A3E0; }
-    .general-popup-form .form-radios + label {
-      display: inline-block;
-      width: inherit;
-      vertical-align: top;
-      margin: 20px 10px;
-      min-width: 82px; }
-      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-        .general-popup-form .form-radios + label {
-          display: flex; } }
-      .general-popup-form .form-radios + label:hover i {
-        box-shadow: inset 0 0 0 3px #fff;
-        background: gray; }
-      .general-popup-form .form-radios + label i {
-        display: inline-block;
-        vertical-align: bottom;
-        margin-right: 20px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        transition: 0.2s;
-        box-shadow: inset 0 0 0 14px #fff;
-        border: 1px solid gray;
-        background: gray; }
-  .general-popup-form .radio-btn-images {
-    position: absolute;
-    width: 28%;
-    visibility: hidden; }
-    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-      .general-popup-form .radio-btn-images {
-        width: 2px; } }
-  .general-popup-form p {
+        overflow-y: auto; } }
+  #general-popup-form .general-popup-form {
+    /*position: fixed;*/
+    /*max-height: calc(100% - 100px);*/
+    /*top: 50%;    	*/
+    /*transform: translate(0%, -50%);*/
+    color: #373B40;
+    font-size: 16px;
+    position: relative;
+    margin: 20px auto;
+    max-width: 400px;
+    max-height: 100%;
+    background-color: white;
+    padding: 0px;
     margin: 0px;
-    margin-bottom: 20px;
-    letter-spacing: 1.4;
-    text-align: left; }
-  .general-popup-form h2 {
-    font-size: 22px;
-    margin-bottom: 5px;
-    font-weight: 600; }
-    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-      .general-popup-form h2 {
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 1.2em; } }
-    .general-popup-form h2.form-title {
-      font-size: 28px;
-      color: #00A3E0;
-      text-align: center;
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 2.76;
-      text-align: center;
-      margin-bottom: 30px; }
-      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-        .general-popup-form h2.form-title {
-          font-size: 26px; } }
-      .general-popup-form h2.form-title + p {
-        font-size: 1em; }
-  .general-popup-form fieldset, .general-popup-form #Step2PathB, .general-popup-form #hold-for-redirect {
-    padding: 90px 60px 30px;
-    text-align: center;
-    display: none;
-    border: none;
-    height: 100%; }
-    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-      .general-popup-form fieldset, .general-popup-form #Step2PathB, .general-popup-form #hold-for-redirect {
-        padding: 60px 10px 10px;
-        height: auto; } }
-    .general-popup-form fieldset input[type=radio]:checked + label, .general-popup-form #Step2PathB input[type=radio]:checked + label, .general-popup-form #hold-for-redirect input[type=radio]:checked + label {
-      color: #00A3E0;
-      font-weight: 500;
-      line-height: 1.2em; }
-      .general-popup-form fieldset input[type=radio]:checked + label .form-button-img, .general-popup-form #Step2PathB input[type=radio]:checked + label .form-button-img, .general-popup-form #hold-for-redirect input[type=radio]:checked + label .form-button-img {
-        border: thick solid #00A3E0; }
-      .general-popup-form fieldset input[type=radio]:checked + label.btn-box, .general-popup-form #Step2PathB input[type=radio]:checked + label.btn-box, .general-popup-form #hold-for-redirect input[type=radio]:checked + label.btn-box {
-        background-color: #00A3E0;
-        color: white; }
-        @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-          .general-popup-form fieldset input[type=radio]:checked + label.btn-box, .general-popup-form #Step2PathB input[type=radio]:checked + label.btn-box, .general-popup-form #hold-for-redirect input[type=radio]:checked + label.btn-box {
-            padding: 8px; } }
-    .general-popup-form fieldset input[type=radio] + .btn-box, .general-popup-form #Step2PathB input[type=radio] + .btn-box, .general-popup-form #hold-for-redirect input[type=radio] + .btn-box {
+    font-size: 14px; }
+    #general-popup-form .general-popup-form legend {
+      margin-left: 10px; }
+    #general-popup-form .general-popup-form label, #general-popup-form .general-popup-form input {
+      display: block;
+      width: 88%;
+      background: none; }
+    #general-popup-form .general-popup-form input {
+      padding: 20px 21px 12px;
+      border: none;
+      border: solid thin #373B40;
+      border-radius: 2px;
+      margin-bottom: 13px;
+      margin-left: 10px;
+      margin-left: 0; }
+    #general-popup-form .general-popup-form label {
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      margin-left: 20px;
+      border-radius: 2px;
+      text-align: left;
+      margin-bottom: .5vh;
+      margin-left: 0;
+      margin-bottom: 0;
       padding: 10px;
       width: 100%;
-      border: thin solid #373B40;
       vertical-align: top; }
-      .general-popup-form fieldset input[type=radio] + .btn-box:hover, .general-popup-form #Step2PathB input[type=radio] + .btn-box:hover, .general-popup-form #hold-for-redirect input[type=radio] + .btn-box:hover {
-        border: thin solid #00A3E0; }
-    .general-popup-form fieldset input[type=radio]:checked + .btn-box, .general-popup-form #Step2PathB input[type=radio]:checked + .btn-box, .general-popup-form #hold-for-redirect input[type=radio]:checked + .btn-box {
-      border: thin solid #00A3E0; }
-    .general-popup-form fieldset h2, .general-popup-form #Step2PathB h2, .general-popup-form #hold-for-redirect h2 {
-      margin-bottom: 20px;
-      text-align: center;
-      font-weight: 300;
-      line-height: 1.25em; }
-    .general-popup-form fieldset .last-call, .general-popup-form #Step2PathB .last-call, .general-popup-form #hold-for-redirect .last-call {
-      text-align: left;
-      margin-bottom: 10px; }
-      .general-popup-form fieldset .last-call p, .general-popup-form fieldset .last-call select, .general-popup-form #Step2PathB .last-call p, .general-popup-form #Step2PathB .last-call select, .general-popup-form #hold-for-redirect .last-call p, .general-popup-form #hold-for-redirect .last-call select {
-        display: inline-block;
-        margin-bottom: 20px;
-        margin-top: 20px; }
-      .general-popup-form fieldset .last-call select, .general-popup-form #Step2PathB .last-call select, .general-popup-form #hold-for-redirect .last-call select {
-        float: right;
-        background: lightgrey;
-        color: #373B40;
-        padding: 5px 10px;
-        font-size: 16px;
-        line-height: 1;
-        border: thin solid #373B40;
+      #general-popup-form .general-popup-form label.radio-images {
+        border: thin solid #373B40; }
+      #general-popup-form .general-popup-form label.main-form-label {
+        padding-bottom: 0px; }
+      #general-popup-form .general-popup-form label .form-button-img {
         border-radius: 2px;
-        height: 34px;
-        margin-top: 13px;
-        /*-webkit-appearance: none;*/
-        /*margin-left: 10px;*/ }
-    .general-popup-form fieldset.general-form p, .general-popup-form #Step2PathB.general-form p, .general-popup-form #hold-for-redirect.general-form p {
-      font-size: 1em;
-      margin-left: 10px; }
-    .general-popup-form fieldset.general-form label, .general-popup-form #Step2PathB.general-form label, .general-popup-form #hold-for-redirect.general-form label {
-      cursor: default;
-      margin-bottom: 4px; }
-    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-      .general-popup-form fieldset.general-form input, .general-popup-form #Step2PathB.general-form input, .general-popup-form #hold-for-redirect.general-form input {
-        margin-bottom: 0px; }
-      .general-popup-form fieldset.general-form .form-title, .general-popup-form #Step2PathB.general-form .form-title, .general-popup-form #hold-for-redirect.general-form .form-title {
-        margin-bottom: 5px;
-        font-size: 20px; }
-      .general-popup-form fieldset.general-form.active, .general-popup-form #Step2PathB.general-form.active, .general-popup-form #hold-for-redirect.general-form.active {
-        padding-left: 10px !important;
-        padding-right: 10px !important; } }
-    .general-popup-form fieldset legend, .general-popup-form #Step2PathB legend, .general-popup-form #hold-for-redirect legend {
-      text-align: left;
-      position: absolute;
-      top: 0;
-      margin-top: 6px;
-      color: white; }
-  .general-popup-form #Step2PathB {
-    display: none; }
-  .general-popup-form #hold-for-redirect {
-    display: none; }
-    .general-popup-form #hold-for-redirect p {
-      text-align: center; }
-    .general-popup-form #hold-for-redirect img {
-      max-width: 300px; }
-  .general-popup-form form {
-    height: 100%; }
-  .general-popup-form .loadbar {
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    height: 34px;
-    width: 100%;
-    background-color: #f5f5f5; }
-    .general-popup-form .loadbar .progressbar {
-      background-color: #00A3E0;
-      width: 20%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0; }
-    .general-popup-form .loadbar .progress {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 7px 17px; }
-  .general-popup-form .form-controls {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    /*padding: 10px 60px;*/ }
-    @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-      .general-popup-form .form-controls {
+        margin-bottom: .5vh;
+        border: thin solid white;
+        margin-right: 10px;
+        padding: 4%;
+        padding: .25em;
+        max-width: 110px;
+        margin-bottom: 0;
+        display: none; }
+        #general-popup-form .general-popup-form label .form-button-img:hover {
+          border: thin solid #00A3E0; }
+        #general-popup-form .general-popup-form label .form-button-img svg {
+          fill: blue;
+          width: 100%;
+          height: 70px; }
+      #general-popup-form .general-popup-form label.radio-images {
+        display: inline-block;
+        width: 28%;
+        max-width: 250px;
+        vertical-align: top;
+        text-align: center;
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-content: space-around;
-        margin: 0px auto 10px;
-        width: auto;
-        max-width: 100%; } }
-    .general-popup-form .form-controls .btn-form-control {
-      width: 110px;
-      padding: 12px 20px;
-      border-radius: 2px;
-      border: solid 1px #00A3E0;
-      margin-bottom: 10px; }
-      .general-popup-form .form-controls .btn-form-control:hover {
+        flex-flow: row;
+        width: 95%;
+        max-width: 480px;
+        text-align: left;
+        align-items: center;
+        margin-bottom: .5em; }
+        #general-popup-form .general-popup-form label.radio-images:hover {
+          color: #00A3E0; }
+        #general-popup-form .general-popup-form label.radio-images .radio-btn-images {
+          visibility: hidden; }
+      #general-popup-form .general-popup-form label.revel-icons {
+        vertical-align: top; }
+        #general-popup-form .general-popup-form label.revel-icons img {
+          max-height: 140px; }
+    #general-popup-form .general-popup-form .form-radios {
+      display: inline-block;
+      width: inherit;
+      visibility: hidden;
+      position: absolute; }
+      #general-popup-form .general-popup-form .form-radios:checked + label > i {
+        box-shadow: inset 0 0 0 3px #fff;
+        background: #00A3E0 !important;
+        border: 1px solid #00A3E0; }
+      #general-popup-form .general-popup-form .form-radios + label {
+        display: inline-block;
+        width: inherit;
+        vertical-align: top;
+        margin: 20px 10px;
+        min-width: 82px;
+        display: flex; }
+        #general-popup-form .general-popup-form .form-radios + label:hover i {
+          box-shadow: inset 0 0 0 3px #fff;
+          background: gray; }
+        #general-popup-form .general-popup-form .form-radios + label i {
+          display: inline-block;
+          vertical-align: bottom;
+          margin-right: 20px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          transition: 0.2s;
+          box-shadow: inset 0 0 0 14px #fff;
+          border: 1px solid gray;
+          background: gray; }
+    #general-popup-form .general-popup-form .radio-btn-images {
+      position: absolute;
+      width: 28%;
+      visibility: hidden;
+      width: 2px; }
+    #general-popup-form .general-popup-form p {
+      margin: 0px;
+      margin-bottom: 20px;
+      letter-spacing: 1.4;
+      text-align: left; }
+    #general-popup-form .general-popup-form h2 {
+      font-size: 22px;
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.2em; }
+      #general-popup-form .general-popup-form h2.form-title {
+        font-size: 28px;
+        color: #00A3E0;
+        text-align: center;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2.76;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 26px; }
+        #general-popup-form .general-popup-form h2.form-title + p {
+          font-size: 1em; }
+    #general-popup-form .general-popup-form fieldset, #general-popup-form .general-popup-form #Step2PathB, #general-popup-form .general-popup-form #hold-for-redirect {
+      padding: 7vh 60px 30px;
+      text-align: center;
+      display: none;
+      border: none;
+      height: 100%;
+      padding: 60px 10px 10px;
+      height: auto; }
+      #general-popup-form .general-popup-form fieldset input[type=radio]:checked + label, #general-popup-form .general-popup-form #Step2PathB input[type=radio]:checked + label, #general-popup-form .general-popup-form #hold-for-redirect input[type=radio]:checked + label {
+        color: #00A3E0;
+        font-weight: 500;
+        line-height: 1.2em; }
+        #general-popup-form .general-popup-form fieldset input[type=radio]:checked + label .form-button-img, #general-popup-form .general-popup-form #Step2PathB input[type=radio]:checked + label .form-button-img, #general-popup-form .general-popup-form #hold-for-redirect input[type=radio]:checked + label .form-button-img {
+          border: thick solid #00A3E0; }
+        #general-popup-form .general-popup-form fieldset input[type=radio]:checked + label.btn-box, #general-popup-form .general-popup-form #Step2PathB input[type=radio]:checked + label.btn-box, #general-popup-form .general-popup-form #hold-for-redirect input[type=radio]:checked + label.btn-box {
+          background-color: #00A3E0;
+          color: white;
+          padding: 8px; }
+      #general-popup-form .general-popup-form fieldset input[type=radio] + .btn-box, #general-popup-form .general-popup-form #Step2PathB input[type=radio] + .btn-box, #general-popup-form .general-popup-form #hold-for-redirect input[type=radio] + .btn-box {
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 95%;
+        border: thin solid #373B40;
+        vertical-align: top; }
+        #general-popup-form .general-popup-form fieldset input[type=radio] + .btn-box:hover, #general-popup-form .general-popup-form #Step2PathB input[type=radio] + .btn-box:hover, #general-popup-form .general-popup-form #hold-for-redirect input[type=radio] + .btn-box:hover {
+          border: thin solid #00A3E0; }
+      #general-popup-form .general-popup-form fieldset input[type=radio]:checked + .btn-box, #general-popup-form .general-popup-form #Step2PathB input[type=radio]:checked + .btn-box, #general-popup-form .general-popup-form #hold-for-redirect input[type=radio]:checked + .btn-box {
+        border: thin solid #00A3E0; }
+      #general-popup-form .general-popup-form fieldset h2, #general-popup-form .general-popup-form #Step2PathB h2, #general-popup-form .general-popup-form #hold-for-redirect h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        /*font-weight: 300;*/
+        line-height: 1.25em; }
+      #general-popup-form .general-popup-form fieldset .last-call, #general-popup-form .general-popup-form #Step2PathB .last-call, #general-popup-form .general-popup-form #hold-for-redirect .last-call {
+        text-align: left;
+        margin-bottom: 10px; }
+        #general-popup-form .general-popup-form fieldset .last-call p, #general-popup-form .general-popup-form fieldset .last-call select, #general-popup-form .general-popup-form #Step2PathB .last-call p, #general-popup-form .general-popup-form #Step2PathB .last-call select, #general-popup-form .general-popup-form #hold-for-redirect .last-call p, #general-popup-form .general-popup-form #hold-for-redirect .last-call select {
+          display: inline-block;
+          margin-bottom: 20px;
+          margin-top: 20px; }
+        #general-popup-form .general-popup-form fieldset .last-call select, #general-popup-form .general-popup-form #Step2PathB .last-call select, #general-popup-form .general-popup-form #hold-for-redirect .last-call select {
+          float: right;
+          background: lightgrey;
+          color: #373B40;
+          padding: 5px 10px;
+          font-size: 16px;
+          line-height: 1;
+          border: thin solid #373B40;
+          border-radius: 2px;
+          height: 34px;
+          margin-top: 13px;
+          /*-webkit-appearance: none;*/
+          /*margin-left: 10px;*/ }
+      #general-popup-form .general-popup-form fieldset.general-form p, #general-popup-form .general-popup-form #Step2PathB.general-form p, #general-popup-form .general-popup-form #hold-for-redirect.general-form p {
+        font-size: 1em;
+        margin-left: 10px; }
+      #general-popup-form .general-popup-form fieldset.general-form label, #general-popup-form .general-popup-form #Step2PathB.general-form label, #general-popup-form .general-popup-form #hold-for-redirect.general-form label {
+        cursor: default;
+        margin-bottom: 4px; }
+      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
+        #general-popup-form .general-popup-form fieldset.general-form input, #general-popup-form .general-popup-form #Step2PathB.general-form input, #general-popup-form .general-popup-form #hold-for-redirect.general-form input {
+          margin-bottom: 0px; }
+        #general-popup-form .general-popup-form fieldset.general-form .form-title, #general-popup-form .general-popup-form #Step2PathB.general-form .form-title, #general-popup-form .general-popup-form #hold-for-redirect.general-form .form-title {
+          margin-bottom: 5px;
+          font-size: 20px; }
+        #general-popup-form .general-popup-form fieldset.general-form.active, #general-popup-form .general-popup-form #Step2PathB.general-form.active, #general-popup-form .general-popup-form #hold-for-redirect.general-form.active {
+          padding-left: 10px !important;
+          padding-right: 10px !important; } }
+      #general-popup-form .general-popup-form fieldset legend, #general-popup-form .general-popup-form #Step2PathB legend, #general-popup-form .general-popup-form #hold-for-redirect legend {
+        text-align: left;
+        position: absolute;
+        top: 0;
+        margin-top: 6px;
+        color: white; }
+    #general-popup-form .general-popup-form #Step2PathB {
+      display: none; }
+    #general-popup-form .general-popup-form #hold-for-redirect {
+      display: none; }
+      #general-popup-form .general-popup-form #hold-for-redirect p {
+        text-align: center; }
+      #general-popup-form .general-popup-form #hold-for-redirect img {
+        max-width: 300px; }
+    #general-popup-form .general-popup-form form {
+      height: 100%; }
+    #general-popup-form .general-popup-form .loadbar {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      height: 34px;
+      width: 100%;
+      background-color: #f5f5f5; }
+      #general-popup-form .general-popup-form .loadbar .progressbar {
         background-color: #00A3E0;
-        color: white;
-        border: solid 1px #373B40; }
-      .general-popup-form .form-controls .btn-form-control#nextBtn {
+        width: 20%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      #general-popup-form .general-popup-form .loadbar .progress {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 7px 17px; }
+    #general-popup-form .general-popup-form .form-controls {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      /*padding: 10px 60px;*/
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-content: space-around;
+      margin: 0px auto 10px;
+      width: auto;
+      max-width: 100%; }
+      #general-popup-form .general-popup-form .form-controls .btn-form-control {
+        width: 110px;
+        padding: 12px 20px;
+        border-radius: 2px;
+        border: solid 1px #00A3E0;
+        margin-bottom: 10px; }
+        #general-popup-form .general-popup-form .form-controls .btn-form-control:hover {
+          background-color: #00A3E0;
+          color: white;
+          border: solid 1px #373B40; }
+        #general-popup-form .general-popup-form .form-controls .btn-form-control#nextBtn {
+          position: absolute;
+          right: 0;
+          margin-right: 50px;
+          margin: 1em; }
+        #general-popup-form .general-popup-form .form-controls .btn-form-control#prevBtn, #general-popup-form .general-popup-form .form-controls .btn-form-control#close-iform {
+          position: absolute;
+          left: 0;
+          margin-left: 70px;
+          margin: 1em; }
+      #general-popup-form .general-popup-form .form-controls .btn-submit {
+        width: 180px;
+        padding: 12px 20px;
         position: absolute;
         right: 0;
-        margin-right: 50px; }
-        @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-          .general-popup-form .form-controls .btn-form-control#nextBtn {
-            margin: 1em auto; } }
-      .general-popup-form .form-controls .btn-form-control#prevBtn {
+        margin-right: 50px;
+        border-radius: 2px;
+        border: solid 1px #00A3E0;
+        margin-bottom: 10px;
+        margin: 1em;
+        width: initial; }
+        #general-popup-form .general-popup-form .form-controls .btn-submit:hover {
+          border: solid 1px #373B40; }
+        @media (max-width: 480px) {
+          #general-popup-form .general-popup-form .form-controls .btn-submit {
+            width: initial; } }
+    #general-popup-form .general-popup-form p.indicator {
+      font-size: .7em;
+      text-align: center; }
+    #general-popup-form .general-popup-form #regForm {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 40px; }
+      #general-popup-form .general-popup-form #regForm fieldset {
         position: absolute;
-        left: 0;
-        margin-left: 70px; }
+        max-width: 750px;
+        min-height: 400px;
+        transform: translateX(760px);
+        transition: all 1s;
+        display: block;
+        top: 0px;
+        opacity: 0; }
+        #general-popup-form .general-popup-form #regForm fieldset.active {
+          position: relative;
+          transform: translateX(0px);
+          opacity: 1; }
+        #general-popup-form .general-popup-form #regForm fieldset.passed {
+          opacity: 0;
+          transform: translateX(-760px); }
         @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-          .general-popup-form .form-controls .btn-form-control#prevBtn {
-            margin: 1em auto; } }
-    .general-popup-form .form-controls .btn-submit {
-      width: 180px;
-      padding: 12px 20px;
-      position: absolute;
-      right: 0;
-      margin-right: 50px;
-      border-radius: 2px;
-      border: solid 1px #00A3E0;
-      margin-bottom: 10px; }
-      .general-popup-form .form-controls .btn-submit:hover {
-        border: solid 1px #373B40; }
-      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-        .general-popup-form .form-controls .btn-submit {
-          margin: 1em auto;
-          width: initial; } }
-      @media (max-width: 480px) {
-        .general-popup-form .form-controls .btn-submit {
-          width: initial; } }
-  .general-popup-form p.indicator {
-    font-size: .7em;
-    text-align: center; }
-  .general-popup-form #regForm {
-    position: relative;
-    overflow: hidden; }
-    .general-popup-form #regForm fieldset {
-      position: absolute;
-      max-width: 750px;
-      min-height: 400px;
-      transform: translateX(760px);
-      transition: all 1s;
-      display: block;
-      top: 0px;
-      opacity: 0; }
-      .general-popup-form #regForm fieldset.active {
-        position: relative;
-        transform: translateX(0px);
-        opacity: 1; }
-      .general-popup-form #regForm fieldset.passed {
-        opacity: 0;
-        transform: translateX(-760px); }
-      @media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px) {
-        .general-popup-form #regForm fieldset {
-          padding: 50px 10px 10px; }
-          .general-popup-form #regForm fieldset .radio-images {
-            /*width: 40%;*/ }
-          .general-popup-form #regForm fieldset input {
-            margin-left: 0px; } }
-    @media (max-width: 420px) {
-      .general-popup-form #regForm {
-        padding-bottom: 10px; } }
+          #general-popup-form .general-popup-form #regForm fieldset {
+            padding: 50px 10px 10px; }
+            #general-popup-form .general-popup-form #regForm fieldset .radio-images {
+              /*width: 40%;*/ }
+            #general-popup-form .general-popup-form #regForm fieldset input {
+              margin-left: 0px; } }
+      @media (max-width: 420px) {
+        #general-popup-form .general-popup-form #regForm {
+          padding-bottom: 10px; } }
+  #general-popup-form .dark-transparency {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  #general-popup-form .cancel-or-close-form {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    z-index: 3; }
+    #general-popup-form .cancel-or-close-form .close:hover {
+      color: #00A3E0;
+      cursor: pointer; }
+  #general-popup-form .error {
+    color: red;
+    font-weight: 700; }
+
+.hero--thank-you-iform p {
+  color: white; }
+
+.hero--thank-you-iform .button {
+  background-color: #00A3E0;
+  border-color: #00A3E0; }
+  .hero--thank-you-iform .button:hover {
+    background-color: white; }
 
 /*# sourceMappingURL=main.css.map */

@@ -31,26 +31,25 @@ $breakpoints: (
 	}
 }
 #general-popup-form {
-	font-family: 'proxima-nova';
-    /*display: none;*/
-/*	position: fixed;
+    display: none;
+	position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 16000004;*/
+    z-index: 16000004;
     @include device(){
     	height: 100%;
-/*	    left: 0;
+	    left: 0;
 	    position: fixed;
 	    top: 0;
-*/	    width: 100%;
-/*	    right: initial;
+	    width: 100%;
+	    right: initial;
 	    bottom: initial;
-*/	    .general-popup-form {
-	    	/*top: 50%;*/
-	    	/*-ms-transform: translate(0,-50%);
-	   		transform: translate(0,-50%);*/
+	    .general-popup-form {
+	    	top: 50%;
+	    	-ms-transform: translate(0,-50%);
+	   		transform: translate(0,-50%);
 		    color: #373B40;
 		    /*font-size: 16px;
 		    position: relative;
@@ -64,29 +63,29 @@ $breakpoints: (
 	    }
     }
 	.general-popup-form {
-		/*position: fixed;*/
+		position: fixed;
     	/*max-height: calc(100% - 100px);*/
-    	/*top: 50%;    	*/
-  		/*transform: translate(0%, -50%);*/
+    	top: 50%;    	
+  		transform: translate(0%, -50%);
 		color: $revel-night;
 		font-size: 16px;
 		position: relative;
 		margin: 20px auto;
-		max-width: 400px;
+		max-width: 750px;
 		max-height: 100%;
 		background-color: white;
 
-		
+		@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 			padding: 0px;
 			margin: 0px;
 			font-size: 14px;
 			legend {
 				margin-left: 10px;
 			}
-		
+		}
 		label, input {
 			display: block;
-			width: 88%;
+			width: 100%;
 			background: none;
 		}
 		input {
@@ -96,9 +95,9 @@ $breakpoints: (
 			border-radius: 2px;
 			margin-bottom: 13px;
 			margin-left: 10px;
-			
+			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 				margin-left: 0;
-			
+			}
 		}
 		label {
 			cursor: pointer;
@@ -109,11 +108,11 @@ $breakpoints: (
 			border-radius: 2px;
 			text-align: left;
 			margin-bottom: .5vh;
-			
+			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 				margin-left: 0;
 				margin-bottom: 0;
-			
-			
+			}
+			@media only-screen and (max-height: 550px), only screen and (max-device-height: 550px), only screen and (max-device-height: 550px){
 				padding: 10px;
 				width: 100%;
 				&.radio-images {
@@ -123,21 +122,21 @@ $breakpoints: (
 					padding-bottom: 0px;
 				}
 				vertical-align: top;
-			
+			}
 			.form-button-img {
 				border-radius: 2px;
 				margin-bottom: .5vh;
 				border: thin solid white;
 				margin-right: 10px;
 				padding: 4%;
-				
+				@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 					padding: .25em;
 					max-width: 110px;
 					margin-bottom: 0;
-				
-				
+				}
+				@media only-screen and (max-height: 550px), only screen and (max-device-height: 550px), only screen and (max-device-height: 550px){
 					display: none;
-				
+				}
 				&:hover {
 					border: thin solid $revel-blue;
 				}
@@ -154,15 +153,15 @@ $breakpoints: (
 				max-width: 250px;
 				vertical-align: top;
 				text-align: center;
-				
+				@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 					display: flex;
 					flex-flow: row;
-					width: 95%;
+					width: 100%;
 					max-width: 480px;
 					text-align: left;
 					align-items: center;
 					margin-bottom: .5em;
-				
+				}
 				&:hover{
 					color: $revel-blue;
 				}
@@ -195,9 +194,9 @@ $breakpoints: (
 				vertical-align: top;
 				margin: 20px 10px;
 				min-width: 82px;
-				
+				@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 					display: flex;
-				
+				}
 				&:hover {
 					i {
 						box-shadow: inset 0 0 0 3px #fff;
@@ -223,9 +222,9 @@ $breakpoints: (
 			position: absolute;
 			width: 28%;
 			visibility: hidden;
-			
+			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 				width: 2px;
-			
+			}
 
 		}
 		p {
@@ -238,11 +237,11 @@ $breakpoints: (
 			font-size: 22px;
 	    margin-bottom: 5px;
 	    font-weight: 600;
-			
+			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 				font-size: 20px;
 				font-weight: 300;
 				line-height: 1.2em;
-			
+			}
 			&.form-title {
 				font-size: 28px;
 				color: $revel-blue;
@@ -252,9 +251,9 @@ $breakpoints: (
 				letter-spacing: 2.76;
 				text-align: center;
 				margin-bottom: 30px;
-				
+				@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 					font-size: 26px;
-				
+				}
 				& + p {
 					font-size: 1em;
 				}
@@ -267,10 +266,10 @@ $breakpoints: (
 			display: none;
 			border: none;
 			height: 100%;
-			
+			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 				padding: 60px 10px 10px;
 				height: auto;
-			
+			}
 			input[type=radio]:checked + label {
 				color: $revel-blue;
 				font-weight: 500;
@@ -281,9 +280,9 @@ $breakpoints: (
 				&.btn-box {
 					background-color: $revel-blue;
 					color: white;
-					
+					@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 						padding: 8px;
-					
+					}
 				}
 				&:not(:checked) + label {
 					.form-button-img {
@@ -298,7 +297,7 @@ $breakpoints: (
 				& + .btn-box {
 					padding: 10px;
 					margin-bottom: 10px;
-					width: 95%;
+					width: 100%;
 					border: thin solid $revel-night;
 					vertical-align: top;
 					&:hover {
@@ -424,7 +423,7 @@ $breakpoints: (
 			height: 50px;
 			text-align: center;
 			/*padding: 10px 60px;*/
-			
+			@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: space-around;
@@ -432,7 +431,7 @@ $breakpoints: (
 				margin: 0px auto 10px;
 				width: auto;
 				max-width: 100%;
-			
+			}
 			.btn-form-control {
 				width: 110px;
 				padding: 12px 20px;
@@ -448,18 +447,18 @@ $breakpoints: (
 					position: absolute;
 					right: 0;
 					margin-right: 50px;
-					
+					@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 						margin: 1em;
-					
+					}
 				}
 				&#prevBtn, &#close-iform {
 					position: absolute;
 					left: 0;
 					margin-left: 70px;
-					
+					@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 						margin: 1em;
 
-					
+					}
 				}
 			}
 			.btn-submit {
@@ -474,10 +473,11 @@ $breakpoints: (
 				&:hover{
 					border: solid 1px $revel-night;
 				}
-				
+				@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){
 					
 					margin: 1em;
 					width: initial;
+				}
 				@media (max-width: 480px) {
 					width: initial;	
 				}
