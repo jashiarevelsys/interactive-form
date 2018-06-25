@@ -30,7 +30,7 @@ $breakpoints: (
 		@content;
 	}
 }
-#general-popup-form {
+#instapage-general-popup-form {
 	font-family: 'proxima-nova';
     /*display: none;*/
 /*	position: fixed;
@@ -90,7 +90,7 @@ $breakpoints: (
 			background: none;
 		}
 		input {
-			padding: 20px 21px 12px;
+			padding: 12px 21px 12px;
 			border: none;
 			border: solid thin $revel-night;
 			border-radius: 2px;
@@ -411,7 +411,7 @@ $breakpoints: (
 				top: 0;
 				left:0;
 			}
-			.progress {
+			.progressed {
 				position: absolute;
 				top: 0;
 				right: 0;

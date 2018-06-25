@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Interactive Form</title>
+	<link rel="stylesheet" href="https://use.typekit.net/vog3uzk.css">
+	
+</head>
+<body>
+	<!-- Start iForm Code -->
+	<link rel="stylesheet" href="https://use.typekit.net/vog3uzk.css">
+	<!-- Form Styles -->
+	<style>
+#instapage-general-popup-form{font-family:'proxima-nova'}@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){#instapage-general-popup-form{height:100%;width:100%}#instapage-general-popup-form .general-popup-form{color:#373B40;max-height:100%;background-color:#fff;position:absolute;width:100%;overflow-y:auto}}#instapage-general-popup-form .general-popup-form{color:#373B40;font-size:16px;position:relative;margin:20px auto;max-width:400px;max-height:100%;background-color:white;padding:0px;margin:0px;font-size:14px}#instapage-general-popup-form .general-popup-form legend{margin-left:10px}#instapage-general-popup-form .general-popup-form label,#instapage-general-popup-form .general-popup-form input{display:block;width:88%;background:none}#instapage-general-popup-form .general-popup-form input{padding:12px 21px 12px;border:none;border:solid thin #373B40;border-radius:2px;margin-bottom:13px;margin-left:10px;margin-left:0}#instapage-general-popup-form .general-popup-form label{cursor:pointer;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;margin-left:20px;border-radius:2px;text-align:left;margin-bottom:.5vh;margin-left:0;margin-bottom:0;padding:10px;width:100%;vertical-align:top}#instapage-general-popup-form .general-popup-form label.radio-images{border:thin solid #373B40}#instapage-general-popup-form .general-popup-form label.main-form-label{padding-bottom:0px}#instapage-general-popup-form .general-popup-form label .form-button-img{border-radius:2px;margin-bottom:.5vh;border:thin solid white;margin-right:10px;padding:4%;padding:.25em;max-width:110px;margin-bottom:0;display:none}#instapage-general-popup-form .general-popup-form label .form-button-img:hover{border:thin solid #00A3E0}#instapage-general-popup-form .general-popup-form label .form-button-img svg{fill:blue;width:100%;height:70px}#instapage-general-popup-form .general-popup-form label.radio-images{display:inline-block;width:28%;max-width:250px;vertical-align:top;text-align:center;display:flex;flex-flow:row;width:95%;max-width:480px;text-align:left;align-items:center;margin-bottom:.5em}#instapage-general-popup-form .general-popup-form label.radio-images:hover{color:#00A3E0}#instapage-general-popup-form .general-popup-form label.radio-images .radio-btn-images{visibility:hidden}#instapage-general-popup-form .general-popup-form label.revel-icons{vertical-align:top}#instapage-general-popup-form .general-popup-form label.revel-icons img{max-height:140px}#instapage-general-popup-form .general-popup-form .form-radios{display:inline-block;width:inherit;visibility:hidden;position:absolute}#instapage-general-popup-form .general-popup-form .form-radios:checked+label>i{box-shadow:inset 0 0 0 3px #fff;background:#00A3E0 !important;border:1px solid #00A3E0}#instapage-general-popup-form .general-popup-form .form-radios+label{display:inline-block;width:inherit;vertical-align:top;margin:20px 10px;min-width:82px;display:flex}#instapage-general-popup-form .general-popup-form .form-radios+label:hover i{box-shadow:inset 0 0 0 3px #fff;background:gray}#instapage-general-popup-form .general-popup-form .form-radios+label i{display:inline-block;vertical-align:bottom;margin-right:20px;width:30px;height:30px;border-radius:50%;transition:0.2s;box-shadow:inset 0 0 0 14px #fff;border:1px solid gray;background:gray}#instapage-general-popup-form .general-popup-form .radio-btn-images{position:absolute;width:28%;visibility:hidden;width:2px}#instapage-general-popup-form .general-popup-form p{margin:0px;margin-bottom:20px;letter-spacing:1.4;text-align:left}#instapage-general-popup-form .general-popup-form h2{font-size:22px;margin-bottom:5px;font-weight:600;font-size:20px;font-weight:300;line-height:1.2em}#instapage-general-popup-form .general-popup-form h2.form-title{font-size:28px;color:#00A3E0;text-align:center;font-weight:300;text-transform:uppercase;letter-spacing:2.76;text-align:center;margin-bottom:30px;font-size:26px}#instapage-general-popup-form .general-popup-form h2.form-title+p{font-size:1em}#instapage-general-popup-form .general-popup-form fieldset,#instapage-general-popup-form .general-popup-form #Step2PathB,#instapage-general-popup-form .general-popup-form #hold-for-redirect{padding:7vh 60px 30px;text-align:center;display:none;border:none;height:100%;padding:60px 10px 10px;height:auto}#instapage-general-popup-form .general-popup-form fieldset input[type=radio]:checked+label,#instapage-general-popup-form .general-popup-form #Step2PathB input[type=radio]:checked+label,#instapage-general-popup-form .general-popup-form #hold-for-redirect input[type=radio]:checked+label{color:#00A3E0;font-weight:500;line-height:1.2em}#instapage-general-popup-form .general-popup-form fieldset input[type=radio]:checked+label .form-button-img,#instapage-general-popup-form .general-popup-form #Step2PathB input[type=radio]:checked+label .form-button-img,#instapage-general-popup-form .general-popup-form #hold-for-redirect input[type=radio]:checked+label .form-button-img{border:thick solid #00A3E0}#instapage-general-popup-form .general-popup-form fieldset input[type=radio]:checked+label.btn-box,#instapage-general-popup-form .general-popup-form #Step2PathB input[type=radio]:checked+label.btn-box,#instapage-general-popup-form .general-popup-form #hold-for-redirect input[type=radio]:checked+label.btn-box{background-color:#00A3E0;color:white;padding:8px}#instapage-general-popup-form .general-popup-form fieldset input[type=radio]+.btn-box,#instapage-general-popup-form .general-popup-form #Step2PathB input[type=radio]+.btn-box,#instapage-general-popup-form .general-popup-form #hold-for-redirect input[type=radio]+.btn-box{padding:10px;margin-bottom:10px;width:95%;border:thin solid #373B40;vertical-align:top}#instapage-general-popup-form .general-popup-form fieldset input[type=radio]+.btn-box:hover,#instapage-general-popup-form .general-popup-form #Step2PathB input[type=radio]+.btn-box:hover,#instapage-general-popup-form .general-popup-form #hold-for-redirect input[type=radio]+.btn-box:hover{border:thin solid #00A3E0}#instapage-general-popup-form .general-popup-form fieldset input[type=radio]:checked+.btn-box,#instapage-general-popup-form .general-popup-form #Step2PathB input[type=radio]:checked+.btn-box,#instapage-general-popup-form .general-popup-form #hold-for-redirect input[type=radio]:checked+.btn-box{border:thin solid #00A3E0}#instapage-general-popup-form .general-popup-form fieldset h2,#instapage-general-popup-form .general-popup-form #Step2PathB h2,#instapage-general-popup-form .general-popup-form #hold-for-redirect h2{margin-bottom:20px;text-align:center;line-height:1.25em}#instapage-general-popup-form .general-popup-form fieldset .last-call,#instapage-general-popup-form .general-popup-form #Step2PathB .last-call,#instapage-general-popup-form .general-popup-form #hold-for-redirect .last-call{text-align:left;margin-bottom:10px}#instapage-general-popup-form .general-popup-form fieldset .last-call p,#instapage-general-popup-form .general-popup-form fieldset .last-call select,#instapage-general-popup-form .general-popup-form #Step2PathB .last-call p,#instapage-general-popup-form .general-popup-form #Step2PathB .last-call select,#instapage-general-popup-form .general-popup-form #hold-for-redirect .last-call p,#instapage-general-popup-form .general-popup-form #hold-for-redirect .last-call select{display:inline-block;margin-bottom:20px;margin-top:20px}#instapage-general-popup-form .general-popup-form fieldset .last-call select,#instapage-general-popup-form .general-popup-form #Step2PathB .last-call select,#instapage-general-popup-form .general-popup-form #hold-for-redirect .last-call select{float:right;background:lightgrey;color:#373B40;padding:5px 10px;font-size:16px;line-height:1;border:thin solid #373B40;border-radius:2px;height:34px;margin-top:13px}#instapage-general-popup-form .general-popup-form fieldset.general-form p,#instapage-general-popup-form .general-popup-form #Step2PathB.general-form p,#instapage-general-popup-form .general-popup-form #hold-for-redirect.general-form p{font-size:1em;margin-left:10px}#instapage-general-popup-form .general-popup-form fieldset.general-form label,#instapage-general-popup-form .general-popup-form #Step2PathB.general-form label,#instapage-general-popup-form .general-popup-form #hold-for-redirect.general-form label{cursor:default;margin-bottom:4px}@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){#instapage-general-popup-form .general-popup-form fieldset.general-form input,#instapage-general-popup-form .general-popup-form #Step2PathB.general-form input,#instapage-general-popup-form .general-popup-form #hold-for-redirect.general-form input{margin-bottom:0px}#instapage-general-popup-form .general-popup-form fieldset.general-form .form-title,#instapage-general-popup-form .general-popup-form #Step2PathB.general-form .form-title,#instapage-general-popup-form .general-popup-form #hold-for-redirect.general-form .form-title{margin-bottom:5px;font-size:20px}#instapage-general-popup-form .general-popup-form fieldset.general-form.active,#instapage-general-popup-form .general-popup-form #Step2PathB.general-form.active,#instapage-general-popup-form .general-popup-form #hold-for-redirect.general-form.active{padding-left:10px !important;padding-right:10px !important}}#instapage-general-popup-form .general-popup-form fieldset legend,#instapage-general-popup-form .general-popup-form #Step2PathB legend,#instapage-general-popup-form .general-popup-form #hold-for-redirect legend{text-align:left;position:absolute;top:0;margin-top:6px;color:white}#instapage-general-popup-form .general-popup-form #Step2PathB{display:none}#instapage-general-popup-form .general-popup-form #hold-for-redirect{display:none}#instapage-general-popup-form .general-popup-form #hold-for-redirect p{text-align:center}#instapage-general-popup-form .general-popup-form #hold-for-redirect img{max-width:300px}#instapage-general-popup-form .general-popup-form form{height:100%}#instapage-general-popup-form .general-popup-form .loadbar{position:absolute;overflow:hidden;top:0;left:0;height:34px;width:100%;background-color:#f5f5f5}#instapage-general-popup-form .general-popup-form .loadbar .progressbar{background-color:#00A3E0;width:20%;height:100%;position:absolute;top:0;left:0}#instapage-general-popup-form .general-popup-form .loadbar .progressed{position:absolute;top:0;right:0;margin:7px 17px}#instapage-general-popup-form .general-popup-form .form-controls{position:relative;width:100%;height:50px;text-align:center;display:flex;flex-flow:row wrap;justify-content:space-around;align-content:space-around;margin:0px auto 10px;width:auto;max-width:100%}#instapage-general-popup-form .general-popup-form .form-controls .btn-form-control{width:110px;padding:12px 20px;border-radius:2px;border:solid 1px #00A3E0;margin-bottom:10px}#instapage-general-popup-form .general-popup-form .form-controls .btn-form-control:hover{background-color:#00A3E0;color:white;border:solid 1px #373B40}#instapage-general-popup-form .general-popup-form .form-controls .btn-form-control#nextBtn{position:absolute;right:0;margin-right:50px;margin:1em}#instapage-general-popup-form .general-popup-form .form-controls .btn-form-control#prevBtn,#instapage-general-popup-form .general-popup-form .form-controls .btn-form-control#close-iform{position:absolute;left:0;margin-left:70px;margin:1em}#instapage-general-popup-form .general-popup-form .form-controls .btn-submit{width:180px;padding:12px 20px;position:absolute;right:0;margin-right:50px;border-radius:2px;border:solid 1px #00A3E0;margin-bottom:10px;margin:1em;width:initial}#instapage-general-popup-form .general-popup-form .form-controls .btn-submit:hover{border:solid 1px #373B40}@media (max-width: 480px){#instapage-general-popup-form .general-popup-form .form-controls .btn-submit{width:initial}}#instapage-general-popup-form .general-popup-form p.indicator{font-size:.7em;text-align:center}#instapage-general-popup-form .general-popup-form #regForm{position:relative;overflow:hidden;padding-bottom:40px}#instapage-general-popup-form .general-popup-form #regForm fieldset{position:absolute;max-width:750px;min-height:400px;transform:translateX(760px);transition:all 1s;display:block;top:0px;opacity:0}#instapage-general-popup-form .general-popup-form #regForm fieldset.active{position:relative;transform:translateX(0px);opacity:1}#instapage-general-popup-form .general-popup-form #regForm fieldset.passed{opacity:0;transform:translateX(-760px)}@media only-screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-device-height: 480px){#instapage-general-popup-form .general-popup-form #regForm fieldset{padding:50px 10px 10px}#instapage-general-popup-form .general-popup-form #regForm fieldset input{margin-left:0px}}@media (max-width: 420px){#instapage-general-popup-form .general-popup-form #regForm{padding-bottom:10px}}#instapage-general-popup-form .dark-transparency{background-color:rgba(0,0,0,0.5);position:absolute;top:0;bottom:0;left:0;right:0}#instapage-general-popup-form .cancel-or-close-form{position:absolute;right:20px;top:50px;z-index:3}#instapage-general-popup-form .cancel-or-close-form .close:hover{color:#00A3E0;cursor:pointer}#instapage-general-popup-form .error{color:red;font-weight:700}.hero--thank-you-iform p{color:white}.hero--thank-you-iform .button{background-color:#00A3E0;border-color:#00A3E0}.hero--thank-you-iform .button:hover{background-color:white}
+	</style>
+	<div id="instapage-general-popup-form">
+		<div class="general-popup-form">
+			<form id="regForm" autocomplete="on" >
+				<div class="loadbar">
+					<div class="progressbar" ></div>
+					<div class="progressed">1 / 6</div>
+				</div>
+			<fieldset>
+				<legend>Step 1</legend>
+				<h2>Tell us about your customers!</h2>
+				<!-- <p class="indicator">Select One Below</p> -->
+					<input id="QuickServiceBusiness" type="radio" name="businessType" value="QSR" class="radio-btn-images">
+				<label for="QuickServiceBusiness" class="radio-images">
+					<img class="form-button-img" src="https://static.revelsystems.com/wp-content/uploads/2018/01/L-Stand_Black_DSC04530-150x150.jpg">
+					They order and pay at the counter.
+				</label>
+				<input id="TableServiceBusiness" type="radio" name="businessType" value="TSR" class="radio-btn-images">
+				<label for="TableServiceBusiness" class="radio-images">
+					<img class="form-button-img" src="https://static.revelsystems.com/wp-content/uploads/2018/03/Revel-3-150x150.jpg">
+					They order and pay at the table.
+				</label>
+				<input id="QuickTableBusiness" type="radio" name="businessType" value="QuickTable" class="radio-btn-images">
+				<label for="QuickTableBusiness" class="radio-images">
+					<img class="form-button-img" src="https://static.revelsystems.com/wp-content/uploads/2018/03/MobileOrderTaker-150x150.jpg">
+					They can order and pay at a counter or table.
+				</label>
+				<input id="RetailBusiness" type="radio" name="businessType" value="Retail" class="radio-btn-images">
+				<label for="RetailBusiness" class="radio-images">
+					<img class="form-button-img" src="https://static.revelsystems.com/wp-content/uploads/2017/06/RevelKiosk-6-150x150.jpg">
+					It’s a retail store; they check out at the counter.
+				</label>
+				<input id="otherVerticalBusiness" type="radio" name="businessType" value="Other" class="radio-btn-images">
+				<label for="otherVerticalBusiness" class="radio-images">
+					<img class="form-button-img" src="https://static.revelsystems.com/wp-content/uploads/2017/10/fam-biz-main-150x150.jpg">
+					Other
+				</label>
+			</fieldset>
+			<fieldset id="Step2PathA">
+				<legend>Step 2</legend>
+				<h2>Tell us about your business!</h2>
+					<input id="pizzaBusiness" type="radio" name="subBusinessType" value="Pizza" class="radio-btn-images">
+				<label for="pizzaBusiness" class="radio-images btn-box">
+					<!-- <img class="form-button-img" src="http://via.placeholder.com/300x200"> -->
+					Pizza
+				</label>
+				<input id="coffeeShopBusiness" type="radio" name="subBusinessType" value="Coffee Shop" class="radio-btn-images">
+				<label for="coffeeShopBusiness" class="radio-images btn-box">
+					<!-- <img class="form-button-img" src="http://via.placeholder.com/300x200"> -->
+					Coffee Shop
+				</label>
+				<input id="bakeryBusiness" type="radio" name="subBusinessType" value="Bakery" class="radio-btn-images">
+				<label for="bakeryBusiness" class="radio-images btn-box">
+					<!-- <img class="form-button-img" src="http://via.placeholder.com/300x200"> -->
+					Bakery
+				</label>
+				<input id="burgerTacoDeliSimilarBusiness" type="radio" name="subBusinessType" value="Burger - Taco - Deli" class="radio-btn-images">
+				<label for="burgerTacoDeliSimilarBusiness" class="radio-images btn-box">
+					<!-- <img class="form-button-img" src="http://via.placeholder.com/300x200"> -->
+					Burger / Taco / Deli
+				</label>
+				<input id="frozenYogurtIceCreamBusiness" type="radio" name="subBusinessType" value="Frozen Yogurt - Ice Cream" class="radio-btn-images">
+				<label for="frozenYogurtIceCreamBusiness" class="radio-images btn-box">
+					<!-- <img class="form-button-img" src="http://via.placeholder.com/300x200"> -->
+					Frozen Yogurt / Ice Cream
+				</label>
+				<input id="foodTruckBusiness" type="radio" name="subBusinessType" value="Food Truck" class="radio-btn-images">
+				<label for="foodTruckBusiness" class="radio-images btn-box">
+					<!-- <img class="form-button-img" src="http://via.placeholder.com/300x200"> -->
+					Food Truck
+				</label>
+				<input id="barBusiness" type="radio" name="subBusinessType" value="Bar" class="radio-btn-images">
+				<label for="barBusiness" class="radio-images btn-box">
+					<!-- <img class="form-button-img" src="http://via.placeholder.com/300x200"> -->
+					Bar / Night Club / Winery
+				</label>
+				<input id="otherBusiness" type="radio" name="subBusinessType" value="Other" class="radio-btn-images">
+				<label for="otherBusiness" class="radio-images btn-box">
+					<!-- <img class="form-button-img" src="http://via.placeholder.com/300x200"> -->
+					Other
+				</label>
+			</fieldset>
+			<div id="Step2PathB">
+				<legend>Step 2</legend>
+				<h2>How many stations or iPads are you considering?</h2>
+				<input type="radio" id="noOfTerminals1" name="noOfTerminals" class="form-radios" value="1">
+				<label for="noOfTerminals1"><i></i>1</label>
+				<input type="radio" id="noOfTerminals2" name="noOfTerminals" class="form-radios" value="2">
+				<label for="noOfTerminals2"><i></i>2</label>
+				<input type="radio" id="noOfTerminals3" name="noOfTerminals" class="form-radios" value="4">
+				<label for="noOfTerminals3"><i></i>3 - 4</label>
+				<input type="radio" id="noOfTerminals5" name="noOfTerminals" class="form-radios" value="6">
+				<label for="noOfTerminals5"><i></i>5 - 6</label>
+				<input type="radio" id="noOfTerminals6" name="noOfTerminals" class="form-radios" value="7">
+				<label for="noOfTerminals6"><i></i>6+</label>
+			</div>
+			<fieldset>
+				<legend>Step 3</legend>
+				<h2>How many locations do you currently operate?</h2>
+				<input id="noOfLocations1" type="radio" name="noOfLocations" value="1" class="form-radios">
+				<label for="noOfLocations1"><i></i>1-2</label>
+				<input id="noOfLocations3" type="radio" name="noOfLocations" value="3" class="form-radios">
+				<label for="noOfLocations3"><i></i>3-7</label>
+				<input id="noOfLocations8" type="radio" name="noOfLocations" value="8" class="form-radios">
+				<label for="noOfLocations8"><i></i>8-19</label>
+				<input id="noOfLocations20" type="radio" name="noOfLocations" value="20" class="form-radios">
+				<label for="noOfLocations20"><i></i>20+</label>
+			</fieldset>
+			<fieldset>
+				<legend>Step 4</legend>
+				<h2>How long has your business been around?</h2>
+				<input type="radio" name="newOrExistingBus" value="New" class="radio-btn-images" id="newOrExistingBus1">
+				<label class="radio-images btn-box" for="newOrExistingBus1">
+					We haven’t opened yet
+				</label>
+				<input type="radio" name="newOrExistingBus" value="Existing" class="radio-btn-images" id="newOrExistingBus2">
+				<label class="radio-images btn-box" for="newOrExistingBus2">
+					Less than a year
+				</label>
+				<input type="radio" name="newOrExistingBus" value="LongLasting" class="radio-btn-images" id="newOrExistingBus3">
+				<label class="radio-images btn-box" for="newOrExistingBus3">
+					More than a year
+				</label>
+			</fieldset>
+			<fieldset id="Step5">
+				<legend>Step 5</legend>
+				<h2>What is most important to you in choosing technology for your business?</h2>
+				<input id="featureEnteredIn0" name="featureEnteredIn" type="radio" class="radio-btn-images" value="Reporting">
+				<label for="featureEnteredIn0" class="radio-images btn-box">
+					A Sleek, Intuitive POS
+				</label>
+				<input id="featureEnteredIn1" name="featureEnteredIn" type="radio" class="radio-btn-images" value="Inventory Management">
+				<label for="featureEnteredIn1" class="radio-images btn-box">
+					Inventory Management
+				</label>
+				<input id="featureEnteredIn2" name="featureEnteredIn" type="radio" class="radio-btn-images" value="Customer Display System">
+				<label for="featureEnteredIn2" class="radio-images btn-box">
+					Reporting and Analytics
+				</label>
+				<input id="featureEnteredIn3" name="featureEnteredIn" type="radio" class="radio-btn-images" value="Online Ordering">
+				<label for="featureEnteredIn3" class="radio-images btn-box" style="font-size: 14px;">
+					Customer Relationship Management
+				</label>
+				<input id="featureEnteredIn5" name="featureEnteredIn" type="radio" class="radio-btn-images" value="Reporting">
+				<label for="featureEnteredIn5" class="radio-images btn-box">
+					Bundling Payment Processing
+				</label>
+				<input id="featureEnteredIn6" name="featureEnteredIn" type="radio" class="radio-btn-images" value="Reporting">
+				<label for="featureEnteredIn6" class="radio-images btn-box">
+					Integrated Kitchen Management 
+				</label>
+			</fieldset>
+			<fieldset class="general-form">
+				<legend>Last Step</legend>
+				<h2 class="form-title">Get a personalized demo from one of our experts!</h2>
+				<label class="main-form-label" for="fullName">Full Name</label>
+				<input id="fullName" type="text" name="fullName"placeholder="Full Name" required>
+				<label class="main-form-label" for="businessName">Business Name</label>
+				<input id="businessName" 	type="text" name="businessName"placeholder="Enter Your Business Name" required>
+				<label class="main-form-label" for="email">Email</label>
+				<input id="email" type="email" name="email"placeholder="Enter Your Email Address" required>
+				<label class="main-form-label" for="phone">Phone</label>
+				<input id="phone"	type="tel" name="phone"placeholder="Enter Your Telephone Number" required>
+			</fieldset>
+			<div id="hold-for-redirect">
+				<p>Sending information, please hold.</p>
+				<!-- <p>Hold on. We're putting top people on this.</p> -->
+				<img src="https://static.revelsystems.com/wp-content/themes/reveldown/-/img/waiting.gif" alt="waiting">
+			</div>
+				<div class="form-controls" style="position: relative;">
+					<button style="display: none;" class="btn-form-control" type="button" id="prevBtn" onclick="nextPrev(-1);return false;">Previous</button>
+					<button style="display: none;" class="btn-form-control" type="button" id="nextBtn" onclick="nextPrev(1);return false;">Next</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="//app-sj14.marketo.com/js/forms2/js/forms2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<!-- Form Scripts -->
+	<script>
+function getFullName(){fullName=document.getElementById("fullName").value,firstName=fullName.split(" ").slice(0,-1).join(" "),lastName=fullName.split(" ").slice(-1).join(" ")}function showTab(e){var t=document.getElementsByTagName("fieldset");if(document.getElementById("RetailBusiness").checked&&1==e)document.getElementById("Step2PathA").style.display="none",document.getElementById("Step2PathB").style.display="block";else{var n=t[e];n.classList.add("active"),n.classList.remove("passed"),document.getElementById("Step2PathB").style.display="none"}if(document.getElementById("prevBtn").style.display=0===e?"none":"inline-block",e==t.length-1){var a=document.getElementById("nextBtn");a.innerHTML="Submit",a.className="btn-submit",document.getElementById("prevBtn").className="btn-form-control"}else document.getElementById("nextBtn").innerHTML="Next","Next"===document.getElementById("nextBtn").innerHTML&&(document.getElementById("nextBtn").className="btn-form-control",document.getElementById("prevBtn").className="btn-form-control")}function nextPrev(e){var t=document.getElementsByTagName("fieldset");-1===e?(t[currentTab].classList.remove("active"),t[currentTab].style=""):(t[currentTab].classList.remove("active"),t[currentTab].classList.add("passed")),currentTab+=e;var n=17*currentTab+18+"%";if(jQuery(".progressbar").css("width",n),t.length-1==currentTab?jQuery(".progressed").text("Complete!").css("color","white"):jQuery(".progressed").text(currentTab+1+" / 6").css("color","#373B40"),currentTab>=t.length)return submitMarketoForm(),document.getElementById("hold-for-redirect").style.display="block",!0;window.location="#step"+(currentTab+1),showTab(currentTab),showNextButton(currentTab)}function showNextButton(e){var t=document.getElementsByTagName("fieldset");y=t[e],e==t.length-1?$("#nextBtn").show():0===$(y).find(":radio:checked").length?$("#nextBtn").hide():$("#nextBtn").show()}function submitMarketoForm(){fullName=document.getElementById("fullName").value,firstName=fullName.split(" ").slice(0,-1).join(" "),lastName=fullName.split(" ").slice(-1).join(" "),email=document.getElementById("email").value,companyName=document.getElementById("businessName").value,vertical=document.querySelector('input[name="businessType"]:checked').value,subVertical=document.querySelector('input[name="subBusinessType"]:checked')?document.querySelector('input[name="subBusinessType"]:checked').value:"No Selection",noOfTerminals=document.querySelector('input[name="noOfTerminals"]:checked')?document.querySelector('input[name="noOfTerminals"]:checked').value:"No Selection",noOfLocations=document.querySelector('input[name="noOfLocations"]:checked')?document.querySelector('input[name="noOfLocations"]:checked').value:"No Selection",timeInBusiness=document.querySelector('input[name="newOrExistingBus"]:checked').value,favoriteFeature=document.querySelector('input[name="featureEnteredIn"]:checked').value,phone=document.getElementById("phone").value,notes=firstName+" indicated that they have a "+vertical+" business. Their business is a "+timeInBusiness+" business and have selected "+favoriteFeature+" as their favorite feature.",MktoForms2.loadForm("//app-sj14.marketo.com","804-YHP-876",2568,function(e){email&&fullName&&(e.setValues({FirstName:firstName,LastName:lastName,Email:email,Company:companyName,Core_Vertical__c:vertical,Vertical__c:subVertical,of_Terminals__c:noOfTerminals,No_of_Locations__c:noOfLocations,Phone:phone,Notes__c:notes}),e.submit(),e.onSuccess(function(e,t){return finalDest="QuickTable"==vertical?"Other":vertical,location.href="https://revelsystems.dev/thank-you/?vertical="+finalDest+"&fn="+encodeURI(firstName),!1}))})}var currentTab=0,fullName,firstName,lastName,email,companyName,vertical,subVertical,noOfTerminals,noOfLocations,timeInBusiness,favoriteFeature,phone,notes;showTab(currentTab),jQuery(":radio").change(function(e){nextPrev(1)}),$("#regForm").validate({rules:{fullName:{required:!0,minlength:3},businessName:{required:!0,minlength:3},email:{required:!0,email:!0},phone:{required:!0,minlength:8}},messages:{fullName:"Please specify your full first and last name",businessName:"Please specify your company's name",email:{required:"We need your email address to contact you",email:"Your email address must be in the format of name@domain.com"},phone:"Your number should be in 555.555.5555 format"}});
+	</script>
+	<script type="text/javascript">
+		(function() {
+		  var didInit = false;
+		  function initMunchkin() {
+		    if(didInit === false) {
+		      didInit = true;
+		      Munchkin.init('804-YHP-876');
+		    }
+		  }
+		  var s = document.createElement('script');
+		  s.type = 'text/javascript';
+		  s.async = true;
+		  s.src = '//munchkin.marketo.net/munchkin.js';
+		  s.onreadystatechange = function() {
+		    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+		      initMunchkin();
+		    }
+		  };
+		  s.onload = initMunchkin;
+		  document.getElementsByTagName('head')[0].appendChild(s);
+		})();
+	</script>
+	<!-- End iForm Code -->
+</body>
+</html>

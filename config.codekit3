@@ -107,6 +107,13 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/index-compiled.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/index-compiled.html",
+		"oF": 0
+		},
 	"\/index-safe.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -174,11 +181,11 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
 		"oAP": "\/main.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		}
 	},

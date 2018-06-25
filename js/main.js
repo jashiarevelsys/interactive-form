@@ -68,9 +68,9 @@ function nextPrev(n) {
 	var w = (currentTab * 17 + 18) + "%";
 	jQuery('.progressbar').css('width', w);
 	if (x.length - 1 == currentTab) {
-		jQuery('.progress').text("Complete!").css('color', 'white');
+		jQuery('.progressed').text("Complete!").css('color', 'white');
 	} else {
-		jQuery('.progress').text(currentTab + 1 + " / 6").css('color', '373B40');
+		jQuery('.progressed').text(currentTab + 1 + " / 6").css('color', '#373B40');
 	}
 	// if you have reached the end of the form... :
 	if (currentTab >= x.length) {
@@ -132,7 +132,7 @@ function submitMarketoForm(){
 			form.submit();
 			form.onSuccess(function(values, followUpUrl) {
 				finalDest = ( vertical == "QuickTable" ) ? "Other" : vertical;
-				location.href = "https://revelsystems.dev/thank-you/?vertical=" + finalDest + "&fn=" + encodeURI(firstName);
+				location.href = "https://revelsystems.com/thank-you/?vertical=" + finalDest + "&fn=" + encodeURI(firstName);
 				return false;
 			});
 		}
@@ -140,3 +140,33 @@ function submitMarketoForm(){
 
 	});
 }
+$('#regForm').validate({
+	rules: {
+		fullName: {
+			required: true,
+			minlength: 3
+		},
+		businessName: {
+			required: true,
+			minlength: 3
+		},
+		email: {
+			required: true,
+			email: true
+		},
+		phone: {
+			required: true,
+			minlength: 8
+		}
+	},
+	messages: {
+		fullName: "Please specify your full first and last name",
+		businessName: "Please specify your company's name",
+	    email: {
+	      required: "We need your email address to contact you",
+	      email: "Your email address must be in the format of name@domain.com"
+	    },
+	    phone: "Your number should be in 555.555.5555 format"
+
+	}
+});
