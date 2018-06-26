@@ -1,5 +1,5 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
-var fullName, firstName, lastName, email, companyName, vertical, subVertical,noOfTerminals, noOfLocations, timeInBusiness, favoriteFeature, phone, notes;
+var fullName, firstName, lastName, email, companyName, vertical, subVertical,noOfTerminals, noOfLocations, timeInBusiness, favoriteFeature, phone, notes, utm_ad_group, utm_campaign, utm_content, utm_medium, utm_region, utm_source, utm_term, mkwid, pcrid, pkw, pmt, slid, ptaid, pgrid;
 
 function getFullName() {
 	fullName = document.getElementById('fullName').value;
@@ -74,9 +74,16 @@ function nextPrev(n) {
 	}
 	// if you have reached the end of the form... :
 	if (currentTab >= x.length) {
-		submitMarketoForm();
-		document.getElementById('hold-for-redirect').style.display = "block";
-		return true;
+		if ( jQuery('#regForm').valid() ) {
+			submitMarketoForm();
+			document.getElementById('hold-for-redirect').style.display = "block";
+			jQuery('.progress').text('Hold, please').css('color', 'white');
+			document.getElementsByClassName('form-controls')[0].style.display = "none";
+			return true;
+		} else {
+			currentTab -= 1;
+			jQuery('.progress').text("Complete!").css('color', 'white');
+		}
 	}
 	window.location = '#step' + (currentTab + 1);
 	// Otherwise, display the correct tab:
@@ -100,6 +107,16 @@ function showNextButton(currentTab){
 	}
 }
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 function submitMarketoForm(){
 	fullName = document.getElementById('fullName').value;
 	firstName = fullName.split(' ').slice(0, -1).join(' ');
@@ -114,6 +131,20 @@ function submitMarketoForm(){
 	favoriteFeature = document.querySelector( 'input[name="featureEnteredIn"]:checked' ).value;
 	phone = document.getElementById("phone").value;
 	notes = firstName + " indicated that they have a " + vertical + " business. Their business is a " + timeInBusiness + " business and have selected " + favoriteFeature + " as their favorite feature.";
+	utm_ad_group = getParameterByName('utm_ad_group');
+	utm_campaign = getParameterByName('utm_campaign');
+	utm_content = getParameterByName('utm_content');
+	utm_medium = getParameterByName('utm_medium');
+	utm_region = getParameterByName('utm_region');
+	utm_source = getParameterByName('utm_source');
+	utm_term = getParameterByName('utm_term');
+	mkwid = getParameterByName('mkwid');
+	pcrid = getParameterByName('pcrid');
+	pkw = getParameterByName('pkw');
+	pmt = getParameterByName('pmt');
+	slid = getParameterByName('slid');
+	ptaid = getParameterByName('ptaid');
+	pgrid = getParameterByName('pgrid');
 
 	MktoForms2.loadForm("//app-sj14.marketo.com", "804-YHP-876", 2568, function(form){
 		if (email && fullName) {
@@ -127,7 +158,21 @@ function submitMarketoForm(){
 				"of_Terminals__c" : noOfTerminals,
 				"No_of_Locations__c" : noOfLocations,
 				"Phone" : phone,
-				"Notes__c" : notes
+				"Notes__c" : notes,
+				"utm_ad_group" : utm_ad_group,
+				"utm_campaign" : utm_campaign,
+				"utm_content" : utm_content,
+				"utm_medium" : utm_medium,
+				"utm_region" : utm_region,
+				"utm_source" : utm_source,
+				"utm_term" : utm_term,
+				"mkwid" : mkwid,
+				"pcrid" : pcrid,
+				"pkw" : pkw,
+				"pmt" : pmt,
+				"slid" : slid,
+				"ptaid" : ptaid,
+				"pgrid" : pgrid
 			});
 			form.submit();
 			form.onSuccess(function(values, followUpUrl) {
@@ -140,33 +185,35 @@ function submitMarketoForm(){
 
 	});
 }
-$('#regForm').validate({
-	rules: {
-		fullName: {
-			required: true,
-			minlength: 3
+jQuery(document).ready(function($) {
+	$('#regForm').validate({
+		rules: {
+			fullName: {
+				required: true,
+				minlength: 3
+			},
+			businessName: {
+				required: true,
+				minlength: 3
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true,
+				minlength: 8
+			}
 		},
-		businessName: {
-			required: true,
-			minlength: 3
-		},
-		email: {
-			required: true,
-			email: true
-		},
-		phone: {
-			required: true,
-			minlength: 8
-		}
-	},
-	messages: {
-		fullName: "Please specify your full first and last name",
-		businessName: "Please specify your company's name",
-	    email: {
-	      required: "We need your email address to contact you",
-	      email: "Your email address must be in the format of name@domain.com"
-	    },
-	    phone: "Your number should be in 555.555.5555 format"
+		messages: {
+			fullName: "Please specify your full first and last name",
+			businessName: "Please specify your company's name",
+		    email: {
+		      required: "We need your email address to contact you",
+		      email: "Your email address must be in the format of name@domain.com"
+		    },
+		    phone: "Your number should be in 555.555.5555 format"
 
-	}
+		}
+	});
 });
